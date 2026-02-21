@@ -224,12 +224,27 @@ PLOT_LAYOUT = dict(
 GRID_STYLE = dict(gridcolor=THEME["border"], zerolinecolor=THEME["border"])
 
 # ──────────────────────────────────────────────
+# 🔍 전역 필터 (브랜드 선택) - 헤더보다 먼저 정의
+# ──────────────────────────────────────────────
+# 사이드바에 브랜드 선택 위젯 배치
+global_selected_brands = st.sidebar.multiselect(
+    "🏷️ 관심 브랜드 선택 (미선택 시 전체)",
+    BRANDS,
+    help="선택한 브랜드에 대해서만 데이터가 표시됩니다."
+)
+
+# 필터링된 브랜드 목록 및 컬럼 정의
+ACTIVE_BRANDS = global_selected_brands if global_selected_brands else BRANDS
+ACTIVE_BRAND_COLS = [f"cnt_{b}" for b in ACTIVE_BRANDS]
+
+# ──────────────────────────────────────────────
 # 헤더
 # ──────────────────────────────────────────────
-st.markdown("""
+header_brands = " · ".join(ACTIVE_BRANDS[:5]) + (" 외" if len(ACTIVE_BRANDS) > 5 else "")
+st.markdown(f"""
 <div class="main-header">
   <h1>☕ 서울 저가 커피 브랜드 입지 분석</h1>
-  <p>행정동별 브랜드 현황 · 매출 분석 · 입지 추천 | 더벤티 · 매머드커피 · 메가커피 · 빽다방 · 컴포즈커피</p>
+  <p>행정동별 브랜드 현황 · 매출 분석 · 입지 추천 | {header_brands}</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -240,6 +255,7 @@ with st.sidebar:
     st.divider()
 
     st.markdown("### 🔍 필터")
+    st.divider()
     selected_tab = st.radio(
         "분석 메뉴",
         ["📊 브랜드 개요", "🗺️ 지도", "🏙️ 행정동 분석", "📊 분석 시각화", "⭐ 입지 추천"],
@@ -250,7 +266,7 @@ with st.sidebar:
     if selected_tab == "🏙️ 행정동 분석":
         all_dongs = sorted(df_dong["dong_name"].unique())
         dong_search = st.selectbox("🏙️ 행정동 선택", ["전체"] + all_dongs)
-        brand_filter = st.selectbox("브랜드 필터", ["전체"] + BRANDS)
+        brand_filter = st.selectbox("브랜드 필터", ["전체"] + ACTIVE_BRANDS)
         sort_by = st.selectbox(
             "정렬 기준",
             ["total_brand_count", "attractiveness_score", "monthly_sales", "opportunity_score", "penetration_rate", "peak_sales_ratio", "closure_rate"],
@@ -266,7 +282,7 @@ with st.sidebar:
         )
 
     elif selected_tab == "⭐ 입지 추천":
-        rec_brand = st.selectbox("브랜드 선택", ["전체"] + BRANDS)
+        rec_brand = st.selectbox("브랜드 선택", ["전체"] + ACTIVE_BRANDS)
         rec_sort = st.selectbox(
             "정렬 기준",
             ["attractiveness_score", "demand_score", "cost_score"],
@@ -282,8 +298,8 @@ with st.sidebar:
     elif selected_tab == "🗺️ 지도":
         map_brands = st.multiselect(
             "표시할 브랜드",
-            BRANDS,
-            default=BRANDS,
+            ACTIVE_BRANDS,
+            default=ACTIVE_BRANDS,
         )
         all_dongs = sorted(df_dong["dong_name"].unique())
         map_dongs = st.multiselect(
@@ -314,10 +330,10 @@ with st.sidebar:
 # ══════════════════════════════════════════════
 if selected_tab == "📊 브랜드 개요":
 
-    # 브랜드 카드 (5개)
-    cols = st.columns(5)
-    for i, brand in enumerate(BRANDS):
-        if i >= 5: break # 상위 5개만 카드로 표시하거나 레이아웃 조정 필요할 수 있음
+    # 브랜드 카드
+    cols = st.columns(min(5, len(ACTIVE_BRANDS)) if ACTIVE_BRANDS else 1)
+    for i, brand in enumerate(ACTIVE_BRANDS):
+        if i >= 5: break # 상위 5개만 카드로 표시
         s = BRAND_STATS[brand]
         color = ADJUSTED_BRAND_COLORS[brand]
         with cols[i]:
@@ -346,10 +362,10 @@ if selected_tab == "📊 브랜드 개요":
     with c1:
         st.markdown("##### 브랜드별 총 매장 수")
         fig = go.Figure(go.Bar(
-            x=BRANDS,
-            y=[BRAND_STATS[b]["total_stores"] for b in BRANDS],
-            marker_color=[ADJUSTED_BRAND_COLORS[b] for b in BRANDS],
-            text=[BRAND_STATS[b]["total_stores"] for b in BRANDS],
+            x=ACTIVE_BRANDS,
+            y=[BRAND_STATS[b]["total_stores"] for b in ACTIVE_BRANDS],
+            marker_color=[ADJUSTED_BRAND_COLORS[b] for b in ACTIVE_BRANDS],
+            text=[BRAND_STATS[b]["total_stores"] for b in ACTIVE_BRANDS],
             textposition="outside",
         ))
         fig.update_layout(**PLOT_LAYOUT, height=300)
@@ -360,9 +376,9 @@ if selected_tab == "📊 브랜드 개요":
     with c2:
         st.markdown("##### 브랜드별 진출 행정동 수")
         fig = go.Figure(go.Pie(
-            labels=BRANDS,
-            values=[BRAND_STATS[b]["dong_count"] for b in BRANDS],
-            marker_colors=[ADJUSTED_BRAND_COLORS[b] for b in BRANDS],
+            labels=ACTIVE_BRANDS,
+            values=[BRAND_STATS[b]["dong_count"] for b in ACTIVE_BRANDS],
+            marker_colors=[ADJUSTED_BRAND_COLORS[b] for b in ACTIVE_BRANDS],
             hole=0.45,
             textinfo="label+percent",
         ))
@@ -375,7 +391,7 @@ if selected_tab == "📊 브랜드 개요":
     st.markdown("##### 행정동별 브랜드 분포 (총 브랜드 수 상위 30개 동)")
     top30 = df_dong[df_dong["total_brand_count"] > 0].nlargest(30, "total_brand_count")
     fig = go.Figure()
-    for brand in BRANDS:
+    for brand in ACTIVE_BRANDS:
         col = f"cnt_{brand}"
         if col in top30.columns:
             fig.add_trace(go.Bar(
@@ -498,17 +514,22 @@ elif selected_tab == "🏙️ 행정동 분석":
         col = f"cnt_{brand_filter}"
         if col in df_view.columns:
             df_view = df_view[df_view[col] > 0]
+    
+    # 🆕 선택된 브랜드의 매장 수 합계 재계산 (동적 합계 적용)
+    if global_selected_brands:
+        df_view["total_brand_count"] = df_view[ACTIVE_BRAND_COLS].sum(axis=1)
+        
     df_view = df_view.sort_values(sort_by, ascending=False, na_position="last")
 
     st.markdown(f"##### 행정동 분석 — {len(df_view)}개 동")
 
     # 표시 컬럼 선택
-    display_cols = ["dong_name"] + [f"cnt_{b}" for b in BRANDS] + \
+    display_cols = ["dong_name"] + [f"cnt_{b}" for b in ACTIVE_BRANDS] + \
                    ["total_brand_count", "attractiveness_score", "monthly_sales", "total_workers"]
     display_cols = [c for c in display_cols if c in df_view.columns]
 
     rename_map = {"dong_name": "행정동"}
-    for b in BRANDS:
+    for b in ACTIVE_BRANDS:
         rename_map[f"cnt_{b}"] = b
     rename_map.update({
         "total_brand_count": "합계",
@@ -555,7 +576,7 @@ elif selected_tab == "🏙️ 행정동 분석":
         # 브랜드 현황
         st.markdown("**브랜드별 매장 분포**")
         brand_counts_dong = []
-        for brand in BRANDS:
+        for brand in ACTIVE_BRANDS:
             cnt = int(d.get(f"cnt_{brand}", 0))
             if cnt > 0:
                 brand_counts_dong.append({"브랜드": brand, "매장수": cnt})
@@ -762,7 +783,7 @@ elif selected_tab == "📊 분석 시각화":
         
         # 브랜드별 데이터로 변환 (Stacked Bar용)
         # 상위 10개 지역에 존재하는 브랜드만 추출하여 레전드가 지저분해지는 것을 방지
-        relevant_brands = [b for b in BRANDS if top_opp[f'cnt_{b}'].sum() > 0]
+        relevant_brands = [b for b in ACTIVE_BRANDS if top_opp[f'cnt_{b}'].sum() > 0]
         brand_counts = []
         for brand in relevant_brands:
             brand_counts.append(go.Bar(
@@ -836,7 +857,7 @@ elif selected_tab == "📊 분석 시각화":
     c5, c6 = st.columns(2)
     with c5:
         st.markdown("###### 5) 브랜드별 지역 점유율 비교 (전체)")
-        total_counts = {b: df_dong[f"cnt_{b}"].sum() for b in BRANDS}
+        total_counts = {b: df_dong[f"cnt_{b}"].sum() for b in ACTIVE_BRANDS}
         share_df = pd.DataFrame({
             '브랜드': list(total_counts.keys()),
             '매장수': list(total_counts.values())
