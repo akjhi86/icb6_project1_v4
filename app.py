@@ -588,7 +588,8 @@ elif selected_tab == "🏙️ 행정동 분석":
                          text_auto=True)
             # 매장 수에 따라 높이 유동적 조절
             chart_height = max(150, len(df_brand_dong) * 30)
-            fig.update_layout(**PLOT_LAYOUT, height=chart_height, showlegend=False,
+            fig.update_layout(**PLOT_LAYOUT)
+            fig.update_layout(height=chart_height, showlegend=False, 
                               margin=dict(l=0, r=20, t=10, b=10))
             fig.update_xaxes(title=None, **GRID_STYLE)
             fig.update_yaxes(title=None, **GRID_STYLE)
