@@ -10,7 +10,8 @@
     "dong_monthly_sales": 759265242,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.7216890595009597
+    "competition_intensity": 0.7216890595009597,
+    "commercial_index": 2
   },
   "가락2동": {
     "low_cost_count": 8,
@@ -23,7 +24,8 @@
     "dong_monthly_sales": 1518047038,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.8770764119601329
+    "competition_intensity": 1.8770764119601329,
+    "commercial_index": 2
   },
   "가락본동": {
     "low_cost_count": 18,
@@ -36,7 +38,8 @@
     "dong_monthly_sales": 2416684264,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.3440378481058026
+    "competition_intensity": 1.3440378481058026,
+    "commercial_index": 3
   },
   "가리봉동": {
     "low_cost_count": 3,
@@ -49,7 +52,8 @@
     "dong_monthly_sales": 65883256,
     "avg_op_days": 4025.0185185185187,
     "closure_rate": 90.44117647058823,
-    "competition_intensity": 3.2948119006638796
+    "competition_intensity": 3.2948119006638796,
+    "commercial_index": 1
   },
   "가산동": {
     "low_cost_count": 150,
@@ -62,7 +66,8 @@
     "dong_monthly_sales": 12383689986,
     "avg_op_days": 4308.60153256705,
     "closure_rate": 56.6579634464752,
-    "competition_intensity": 0.4077521124345641
+    "competition_intensity": 0.4077521124345641,
+    "commercial_index": 2
   },
   "가양1동": {
     "low_cost_count": 83,
@@ -75,7 +80,8 @@
     "dong_monthly_sales": 3285849559,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.8414288036207693
+    "competition_intensity": 0.8414288036207693,
+    "commercial_index": 4
   },
   "가양2동": {
     "low_cost_count": 4,
@@ -88,7 +94,8 @@
     "dong_monthly_sales": 138136123,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.321338206353669
+    "competition_intensity": 1.321338206353669,
+    "commercial_index": 2
   },
   "가양3동": {
     "low_cost_count": 4,
@@ -101,7 +108,8 @@
     "dong_monthly_sales": 217488112,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.49504950495049505
+    "competition_intensity": 0.49504950495049505,
+    "commercial_index": 2
   },
   "가회동": {
     "low_cost_count": 6,
@@ -114,7 +122,8 @@
     "dong_monthly_sales": 4912200196,
     "avg_op_days": 4798.454545454545,
     "closure_rate": 54.285714285714285,
-    "competition_intensity": 2.2068317877685173
+    "competition_intensity": 2.2068317877685173,
+    "commercial_index": 3
   },
   "갈현1동": {
     "low_cost_count": 12,
@@ -127,7 +136,8 @@
     "dong_monthly_sales": 802421009,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.679369250985545
+    "competition_intensity": 3.679369250985545,
+    "commercial_index": 2
   },
   "갈현2동": {
     "low_cost_count": 4,
@@ -140,7 +150,8 @@
     "dong_monthly_sales": 1451133996,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.4393809114359417
+    "competition_intensity": 3.4393809114359417,
+    "commercial_index": 2
   },
   "강일동": {
     "low_cost_count": 15,
@@ -153,7 +164,8 @@
     "dong_monthly_sales": 1395073198,
     "avg_op_days": 3810.25,
     "closure_rate": 46.2962962962963,
-    "competition_intensity": 1.5489581412502305
+    "competition_intensity": 1.5489581412502305,
+    "commercial_index": 2
   },
   "개봉1동": {
     "low_cost_count": 14,
@@ -166,7 +178,8 @@
     "dong_monthly_sales": 975722320,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.8781579788935083
+    "competition_intensity": 2.8781579788935083,
+    "commercial_index": 2
   },
   "개봉2동": {
     "low_cost_count": 16,
@@ -179,7 +192,8 @@
     "dong_monthly_sales": 1303919719,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.3645758231194423
+    "competition_intensity": 3.3645758231194423,
+    "commercial_index": 2
   },
   "개봉3동": {
     "low_cost_count": 5,
@@ -192,7 +206,8 @@
     "dong_monthly_sales": 533933119,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.248266296809986
+    "competition_intensity": 1.248266296809986,
+    "commercial_index": 2
   },
   "개포2동": {
     "low_cost_count": 6,
@@ -205,7 +220,8 @@
     "dong_monthly_sales": 671863041,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.920662598081953
+    "competition_intensity": 2.920662598081953,
+    "commercial_index": 2
   },
   "개포4동": {
     "low_cost_count": 8,
@@ -218,7 +234,8 @@
     "dong_monthly_sales": 1098720242,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.067792359775976
+    "competition_intensity": 3.067792359775976,
+    "commercial_index": 2
   },
   "거여1동": {
     "low_cost_count": 2,
@@ -231,7 +248,8 @@
     "dong_monthly_sales": 487901273,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.4900264359528959
+    "competition_intensity": 1.4900264359528959,
+    "commercial_index": 3
   },
   "거여2동": {
     "low_cost_count": 9,
@@ -244,7 +262,8 @@
     "dong_monthly_sales": 672815578,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.8361117124918813
+    "competition_intensity": 2.8361117124918813,
+    "commercial_index": 2
   },
   "고덕1동": {
     "low_cost_count": 4,
@@ -257,7 +276,8 @@
     "dong_monthly_sales": 26249472,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.655440414507772
+    "competition_intensity": 2.655440414507772,
+    "commercial_index": 3
   },
   "고덕2동": {
     "low_cost_count": 17,
@@ -270,7 +290,8 @@
     "dong_monthly_sales": 544570880,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.3369250723336326
+    "competition_intensity": 1.3369250723336326,
+    "commercial_index": 2
   },
   "고척1동": {
     "low_cost_count": 17,
@@ -283,7 +304,8 @@
     "dong_monthly_sales": 873271971,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.2109917877447884
+    "competition_intensity": 2.2109917877447884,
+    "commercial_index": 3
   },
   "고척2동": {
     "low_cost_count": 6,
@@ -296,7 +318,8 @@
     "dong_monthly_sales": 489655900,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.515195975686439
+    "competition_intensity": 2.515195975686439,
+    "commercial_index": 2
   },
   "공덕동": {
     "low_cost_count": 12,
@@ -309,7 +332,8 @@
     "dong_monthly_sales": 1969259826,
     "avg_op_days": 4362.320652173913,
     "closure_rate": 73.92739273927393,
-    "competition_intensity": 1.47915952392614
+    "competition_intensity": 1.47915952392614,
+    "commercial_index": 1
   },
   "공릉1동": {
     "low_cost_count": 20,
@@ -322,7 +346,8 @@
     "dong_monthly_sales": 2431177198,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.676836727351227
+    "competition_intensity": 2.676836727351227,
+    "commercial_index": 4
   },
   "공릉2동": {
     "low_cost_count": 21,
@@ -335,7 +360,8 @@
     "dong_monthly_sales": 2526208635,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.2487274937324315
+    "competition_intensity": 2.2487274937324315,
+    "commercial_index": 2
   },
   "공항동": {
     "low_cost_count": 11,
@@ -348,7 +374,8 @@
     "dong_monthly_sales": 696015071,
     "avg_op_days": 4393.043010752688,
     "closure_rate": 69.73684210526315,
-    "competition_intensity": 0.6850689368532692
+    "competition_intensity": 0.6850689368532692,
+    "commercial_index": 4
   },
   "광장동": {
     "low_cost_count": 6,
@@ -361,7 +388,8 @@
     "dong_monthly_sales": 3199015990,
     "avg_op_days": 4231.255319148936,
     "closure_rate": 71.81818181818181,
-    "competition_intensity": 1.6687869490383895
+    "competition_intensity": 1.6687869490383895,
+    "commercial_index": 2
   },
   "광희동": {
     "low_cost_count": 20,
@@ -374,7 +402,8 @@
     "dong_monthly_sales": 3426804059,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.8860426728617719
+    "competition_intensity": 1.8860426728617719,
+    "commercial_index": 2
   },
   "교남동": {
     "low_cost_count": 6,
@@ -387,7 +416,8 @@
     "dong_monthly_sales": 312306993,
     "avg_op_days": 3847.375,
     "closure_rate": 89.28571428571429,
-    "competition_intensity": 1.305946494231013
+    "competition_intensity": 1.305946494231013,
+    "commercial_index": 2
   },
   "구로1동": {
     "low_cost_count": 9,
@@ -400,7 +430,8 @@
     "dong_monthly_sales": 92715966,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.3312456506610997
+    "competition_intensity": 2.3312456506610997,
+    "commercial_index": 1
   },
   "구로2동": {
     "low_cost_count": 15,
@@ -413,7 +444,8 @@
     "dong_monthly_sales": 1612781189,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.1717144031793887
+    "competition_intensity": 1.1717144031793887,
+    "commercial_index": 2
   },
   "구로3동": {
     "low_cost_count": 61,
@@ -426,7 +458,8 @@
     "dong_monthly_sales": 6431167601,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.5128617917965111
+    "competition_intensity": 0.5128617917965111,
+    "commercial_index": 2
   },
   "구로4동": {
     "low_cost_count": 8,
@@ -439,7 +472,8 @@
     "dong_monthly_sales": 1020097876,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.130148270181219
+    "competition_intensity": 3.130148270181219,
+    "commercial_index": 2
   },
   "구로5동": {
     "low_cost_count": 19,
@@ -452,7 +486,8 @@
     "dong_monthly_sales": 5021685314,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.1601369341955114
+    "competition_intensity": 1.1601369341955114,
+    "commercial_index": 2
   },
   "구산동": {
     "low_cost_count": 5,
@@ -465,7 +500,8 @@
     "dong_monthly_sales": 500800421,
     "avg_op_days": 4231.141304347826,
     "closure_rate": 75.43859649122807,
-    "competition_intensity": 1.8616594447119241
+    "competition_intensity": 1.8616594447119241,
+    "commercial_index": 4
   },
   "구의1동": {
     "low_cost_count": 17,
@@ -478,7 +514,8 @@
     "dong_monthly_sales": 1290271584,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.401131719585036
+    "competition_intensity": 4.401131719585036,
+    "commercial_index": 4
   },
   "구의2동": {
     "low_cost_count": 6,
@@ -491,7 +528,8 @@
     "dong_monthly_sales": 745638151,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.933579335793358
+    "competition_intensity": 2.933579335793358,
+    "commercial_index": 2
   },
   "구의3동": {
     "low_cost_count": 16,
@@ -504,7 +542,8 @@
     "dong_monthly_sales": 2773862758,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.773642509268009
+    "competition_intensity": 1.773642509268009,
+    "commercial_index": 2
   },
   "군자동": {
     "low_cost_count": 18,
@@ -517,7 +556,8 @@
     "dong_monthly_sales": 1708935192,
     "avg_op_days": 5131.95,
     "closure_rate": 76.89393939393939,
-    "competition_intensity": 2.5323741007194247
+    "competition_intensity": 2.5323741007194247,
+    "commercial_index": 4
   },
   "금호1가동": {
     "low_cost_count": 2,
@@ -530,7 +570,8 @@
     "dong_monthly_sales": 344361257,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.8743625405656004
+    "competition_intensity": 2.8743625405656004,
+    "commercial_index": 4
   },
   "금호23가동": {
     "low_cost_count": 9,
@@ -543,7 +584,8 @@
     "dong_monthly_sales": 488184614,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 16200.0
+    "competition_intensity": 16200.0,
+    "commercial_index": 4
   },
   "금호4가동": {
     "low_cost_count": 3,
@@ -556,7 +598,8 @@
     "dong_monthly_sales": 217884563,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.5135135135135136
+    "competition_intensity": 3.5135135135135136,
+    "commercial_index": 2
   },
   "길동": {
     "low_cost_count": 31,
@@ -569,7 +612,8 @@
     "dong_monthly_sales": 3779601239,
     "avg_op_days": 4546.123778501628,
     "closure_rate": 79.44572748267899,
-    "competition_intensity": 2.143627979986265
+    "competition_intensity": 2.143627979986265,
+    "commercial_index": 4
   },
   "길음1동": {
     "low_cost_count": 15,
@@ -582,7 +626,8 @@
     "dong_monthly_sales": 588589233,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.1131019036954086
+    "competition_intensity": 3.1131019036954086,
+    "commercial_index": 4
   },
   "길음2동": {
     "low_cost_count": 11,
@@ -595,7 +640,8 @@
     "dong_monthly_sales": 1249764734,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 6.073876618431074
+    "competition_intensity": 6.073876618431074,
+    "commercial_index": 2
   },
   "낙성대동": {
     "low_cost_count": 9,
@@ -608,7 +654,8 @@
     "dong_monthly_sales": 3172006402,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.609939220593493
+    "competition_intensity": 2.609939220593493,
+    "commercial_index": 2
   },
   "난곡동": {
     "low_cost_count": 7,
@@ -621,7 +668,8 @@
     "dong_monthly_sales": 648711265,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.649656526005888
+    "competition_intensity": 2.649656526005888,
+    "commercial_index": 2
   },
   "난향동": {
     "low_cost_count": 2,
@@ -634,7 +682,8 @@
     "dong_monthly_sales": 57183885,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.2796352583586628
+    "competition_intensity": 2.2796352583586628,
+    "commercial_index": 2
   },
   "남가좌1동": {
     "low_cost_count": 16,
@@ -647,7 +696,8 @@
     "dong_monthly_sales": 27000000,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.558718861209965
+    "competition_intensity": 3.558718861209965,
+    "commercial_index": 4
   },
   "남가좌2동": {
     "low_cost_count": 16,
@@ -660,7 +710,8 @@
     "dong_monthly_sales": 1511998496,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.829294180081373
+    "competition_intensity": 4.829294180081373,
+    "commercial_index": 2
   },
   "남영동": {
     "low_cost_count": 14,
@@ -673,7 +724,8 @@
     "dong_monthly_sales": 3727920839,
     "avg_op_days": 2572.439024390244,
     "closure_rate": 71.15384615384616,
-    "competition_intensity": 1.5221472423765794
+    "competition_intensity": 1.5221472423765794,
+    "commercial_index": 2
   },
   "남현동": {
     "low_cost_count": 11,
@@ -686,7 +738,8 @@
     "dong_monthly_sales": 1168871239,
     "avg_op_days": 4048.762886597938,
     "closure_rate": 71.94244604316546,
-    "competition_intensity": 2.330814981514226
+    "competition_intensity": 2.330814981514226,
+    "commercial_index": 2
   },
   "내곡동": {
     "low_cost_count": 4,
@@ -699,7 +752,8 @@
     "dong_monthly_sales": 430695231,
     "avg_op_days": 4055.4,
     "closure_rate": 59.25925925925925,
-    "competition_intensity": 0.9400816636596714
+    "competition_intensity": 0.9400816636596714,
+    "commercial_index": 2
   },
   "노량진1동": {
     "low_cost_count": 17,
@@ -712,7 +766,8 @@
     "dong_monthly_sales": 2182196363,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 5.0
+    "competition_intensity": 5.0,
+    "commercial_index": 2
   },
   "노량진2동": {
     "low_cost_count": 8,
@@ -725,7 +780,8 @@
     "dong_monthly_sales": 950517033,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.322599031062981
+    "competition_intensity": 2.322599031062981,
+    "commercial_index": 2
   },
   "녹번동": {
     "low_cost_count": 15,
@@ -738,7 +794,8 @@
     "dong_monthly_sales": 866175537,
     "avg_op_days": 4823.970588235294,
     "closure_rate": 69.31216931216932,
-    "competition_intensity": 1.610703937276291
+    "competition_intensity": 1.610703937276291,
+    "commercial_index": 2
   },
   "논현1동": {
     "low_cost_count": 25,
@@ -751,7 +808,8 @@
     "dong_monthly_sales": 6685719829,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.421025375453133
+    "competition_intensity": 1.421025375453133,
+    "commercial_index": 2
   },
   "논현2동": {
     "low_cost_count": 36,
@@ -764,7 +822,8 @@
     "dong_monthly_sales": 8721859267,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.206192821956369
+    "competition_intensity": 1.206192821956369,
+    "commercial_index": 2
   },
   "능동": {
     "low_cost_count": 6,
@@ -777,7 +836,8 @@
     "dong_monthly_sales": 1118626165,
     "avg_op_days": 4117.204545454545,
     "closure_rate": 63.793103448275865,
-    "competition_intensity": 1.884646628757108
+    "competition_intensity": 1.884646628757108,
+    "commercial_index": 4
   },
   "다산동": {
     "low_cost_count": 3,
@@ -790,7 +850,8 @@
     "dong_monthly_sales": 1940240008,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.6500849308420287
+    "competition_intensity": 1.6500849308420287,
+    "commercial_index": 2
   },
   "답십리1동": {
     "low_cost_count": 16,
@@ -803,7 +864,8 @@
     "dong_monthly_sales": 1036731486,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.7369467406089776
+    "competition_intensity": 1.7369467406089776,
+    "commercial_index": 3
   },
   "답십리2동": {
     "low_cost_count": 8,
@@ -816,7 +878,8 @@
     "dong_monthly_sales": 897080952,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.499808404649381
+    "competition_intensity": 3.499808404649381,
+    "commercial_index": 2
   },
   "당산1동": {
     "low_cost_count": 22,
@@ -829,7 +892,8 @@
     "dong_monthly_sales": 2342855516,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.358386485088778
+    "competition_intensity": 1.358386485088778,
+    "commercial_index": 2
   },
   "당산2동": {
     "low_cost_count": 34,
@@ -842,7 +906,8 @@
     "dong_monthly_sales": 5288814531,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.2932898305751013
+    "competition_intensity": 1.2932898305751013,
+    "commercial_index": 1
   },
   "대림1동": {
     "low_cost_count": 5,
@@ -855,7 +920,8 @@
     "dong_monthly_sales": 1555388503,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.5256849315068495
+    "competition_intensity": 2.5256849315068495,
+    "commercial_index": 2
   },
   "대림2동": {
     "low_cost_count": 9,
@@ -868,7 +934,8 @@
     "dong_monthly_sales": 345474748,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.8740989908697743
+    "competition_intensity": 1.8740989908697743,
+    "commercial_index": 2
   },
   "대림3동": {
     "low_cost_count": 7,
@@ -881,7 +948,8 @@
     "dong_monthly_sales": 853346081,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.9941743222047952
+    "competition_intensity": 1.9941743222047952,
+    "commercial_index": 2
   },
   "대방동": {
     "low_cost_count": 18,
@@ -894,7 +962,8 @@
     "dong_monthly_sales": 1691478050,
     "avg_op_days": 4102.79104477612,
     "closure_rate": 74.74747474747475,
-    "competition_intensity": 1.5102974828375286
+    "competition_intensity": 1.5102974828375286,
+    "commercial_index": 4
   },
   "대조동": {
     "low_cost_count": 21,
@@ -907,7 +976,8 @@
     "dong_monthly_sales": 4965868016,
     "avg_op_days": 4700.788659793814,
     "closure_rate": 77.73851590106007,
-    "competition_intensity": 3.6064337773309876
+    "competition_intensity": 3.6064337773309876,
+    "commercial_index": 4
   },
   "대치1동": {
     "low_cost_count": 8,
@@ -920,7 +990,8 @@
     "dong_monthly_sales": 4025833820,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.308749669574412
+    "competition_intensity": 4.308749669574412,
+    "commercial_index": 1
   },
   "대치2동": {
     "low_cost_count": 24,
@@ -933,7 +1004,8 @@
     "dong_monthly_sales": 6036141549,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.1008558482966941
+    "competition_intensity": 1.1008558482966941,
+    "commercial_index": 2
   },
   "대치4동": {
     "low_cost_count": 45,
@@ -946,7 +1018,8 @@
     "dong_monthly_sales": 9415890694,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.9162947473549514
+    "competition_intensity": 1.9162947473549514,
+    "commercial_index": 2
   },
   "대학동": {
     "low_cost_count": 21,
@@ -959,7 +1032,8 @@
     "dong_monthly_sales": 2633132876,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.9473864024598566
+    "competition_intensity": 1.9473864024598566,
+    "commercial_index": 2
   },
   "대흥동": {
     "low_cost_count": 17,
@@ -972,7 +1046,8 @@
     "dong_monthly_sales": 1950520406,
     "avg_op_days": 4591.615384615385,
     "closure_rate": 75.72815533980582,
-    "competition_intensity": 3.1443298969072164
+    "competition_intensity": 3.1443298969072164,
+    "commercial_index": 4
   },
   "도곡1동": {
     "low_cost_count": 7,
@@ -985,7 +1060,8 @@
     "dong_monthly_sales": 2306677597,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.0630574569591371
+    "competition_intensity": 1.0630574569591371,
+    "commercial_index": 2
   },
   "도곡2동": {
     "low_cost_count": 14,
@@ -998,7 +1074,8 @@
     "dong_monthly_sales": 4820176986,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.5599863501194364
+    "competition_intensity": 1.5599863501194364,
+    "commercial_index": 2
   },
   "도림동": {
     "low_cost_count": 7,
@@ -1011,7 +1088,8 @@
     "dong_monthly_sales": 283653391,
     "avg_op_days": 4846.304347826087,
     "closure_rate": 71.42857142857143,
-    "competition_intensity": 3.1080695751354437
+    "competition_intensity": 3.1080695751354437,
+    "commercial_index": 2
   },
   "도봉1동": {
     "low_cost_count": 13,
@@ -1024,7 +1102,8 @@
     "dong_monthly_sales": 903804443,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.003338898163606
+    "competition_intensity": 2.003338898163606,
+    "commercial_index": 3
   },
   "도봉2동": {
     "low_cost_count": 8,
@@ -1037,7 +1116,8 @@
     "dong_monthly_sales": 356207027,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.842918904755666
+    "competition_intensity": 2.842918904755666,
+    "commercial_index": 2
   },
   "도화동": {
     "low_cost_count": 14,
@@ -1050,7 +1130,8 @@
     "dong_monthly_sales": 2767525285,
     "avg_op_days": 4375.597402597403,
     "closure_rate": 77.22222222222223,
-    "competition_intensity": 1.1212204760591857
+    "competition_intensity": 1.1212204760591857,
+    "commercial_index": 2
   },
   "독산1동": {
     "low_cost_count": 22,
@@ -1063,7 +1144,8 @@
     "dong_monthly_sales": 1464742958,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.379932937838535
+    "competition_intensity": 1.379932937838535,
+    "commercial_index": 3
   },
   "독산2동": {
     "low_cost_count": 6,
@@ -1076,7 +1158,8 @@
     "dong_monthly_sales": 452766381,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.915856706470425
+    "competition_intensity": 2.915856706470425,
+    "commercial_index": 2
   },
   "독산3동": {
     "low_cost_count": 5,
@@ -1089,7 +1172,8 @@
     "dong_monthly_sales": 772021152,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.690238278247502
+    "competition_intensity": 2.690238278247502,
+    "commercial_index": 2
   },
   "독산4동": {
     "low_cost_count": 4,
@@ -1102,7 +1186,8 @@
     "dong_monthly_sales": 184808369,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.82793867120954
+    "competition_intensity": 2.82793867120954,
+    "commercial_index": 2
   },
   "돈암1동": {
     "low_cost_count": 1,
@@ -1115,7 +1200,8 @@
     "dong_monthly_sales": 22829781,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.6548463356973995
+    "competition_intensity": 1.6548463356973995,
+    "commercial_index": 2
   },
   "돈암2동": {
     "low_cost_count": 5,
@@ -1128,7 +1214,8 @@
     "dong_monthly_sales": 672000000,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.399795151928986
+    "competition_intensity": 1.399795151928986,
+    "commercial_index": 2
   },
   "동선동": {
     "low_cost_count": 19,
@@ -1141,7 +1228,8 @@
     "dong_monthly_sales": 8397556013,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.020369874028411
+    "competition_intensity": 4.020369874028411,
+    "commercial_index": 4
   },
   "동화동": {
     "low_cost_count": 4,
@@ -1154,7 +1242,8 @@
     "dong_monthly_sales": 134299877,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.5728680265421477
+    "competition_intensity": 1.5728680265421477,
+    "commercial_index": 2
   },
   "둔촌2동": {
     "low_cost_count": 12,
@@ -1167,7 +1256,8 @@
     "dong_monthly_sales": 1067371962,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.5877632898696086
+    "competition_intensity": 2.5877632898696086,
+    "commercial_index": 2
   },
   "등촌1동": {
     "low_cost_count": 16,
@@ -1180,7 +1270,8 @@
     "dong_monthly_sales": 5205634558,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.0565167243367934
+    "competition_intensity": 1.0565167243367934,
+    "commercial_index": 3
   },
   "등촌2동": {
     "low_cost_count": 10,
@@ -1193,7 +1284,8 @@
     "dong_monthly_sales": 624668119,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4345549738219896
+    "competition_intensity": 2.4345549738219896,
+    "commercial_index": 2
   },
   "등촌3동": {
     "low_cost_count": 22,
@@ -1206,7 +1298,8 @@
     "dong_monthly_sales": 2168575763,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.195524677433908
+    "competition_intensity": 1.195524677433908,
+    "commercial_index": 2
   },
   "마장동": {
     "low_cost_count": 3,
@@ -1219,7 +1312,8 @@
     "dong_monthly_sales": 910622217,
     "avg_op_days": 5733.297619047619,
     "closure_rate": 77.06422018348624,
-    "competition_intensity": 0.8495713172252534
+    "competition_intensity": 0.8495713172252534,
+    "commercial_index": 2
   },
   "마천1동": {
     "low_cost_count": 6,
@@ -1232,7 +1326,8 @@
     "dong_monthly_sales": 248522500,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.7768136063866713
+    "competition_intensity": 2.7768136063866713,
+    "commercial_index": 2
   },
   "마천2동": {
     "low_cost_count": 6,
@@ -1245,7 +1340,8 @@
     "dong_monthly_sales": 1696778497,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4864864864864864
+    "competition_intensity": 2.4864864864864864,
+    "commercial_index": 2
   },
   "망우3동": {
     "low_cost_count": 2,
@@ -1258,7 +1354,8 @@
     "dong_monthly_sales": 784027289,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.848523748395379
+    "competition_intensity": 1.848523748395379,
+    "commercial_index": 2
   },
   "망우본동": {
     "low_cost_count": 23,
@@ -1271,7 +1368,8 @@
     "dong_monthly_sales": 1110256097,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.3640838242971136
+    "competition_intensity": 2.3640838242971136,
+    "commercial_index": 2
   },
   "망원1동": {
     "low_cost_count": 11,
@@ -1284,7 +1382,8 @@
     "dong_monthly_sales": 2283267559,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 5.337423312883435
+    "competition_intensity": 5.337423312883435,
+    "commercial_index": 4
   },
   "망원2동": {
     "low_cost_count": 10,
@@ -1297,7 +1396,8 @@
     "dong_monthly_sales": 1337941932,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.28743961352657
+    "competition_intensity": 4.28743961352657,
+    "commercial_index": 2
   },
   "면목2동": {
     "low_cost_count": 8,
@@ -1310,7 +1410,8 @@
     "dong_monthly_sales": 809740634,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.9469548133595285
+    "competition_intensity": 2.9469548133595285,
+    "commercial_index": 4
   },
   "면목38동": {
     "low_cost_count": 15,
@@ -1336,7 +1437,8 @@
     "dong_monthly_sales": 437406571,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.127659574468085
+    "competition_intensity": 2.127659574468085,
+    "commercial_index": 2
   },
   "면목7동": {
     "low_cost_count": 7,
@@ -1349,7 +1451,8 @@
     "dong_monthly_sales": 1649442415,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.792956891317547
+    "competition_intensity": 2.792956891317547,
+    "commercial_index": 2
   },
   "면목본동": {
     "low_cost_count": 14,
@@ -1362,7 +1465,8 @@
     "dong_monthly_sales": 761485929,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.032476319350474
+    "competition_intensity": 4.032476319350474,
+    "commercial_index": 2
   },
   "명동": {
     "low_cost_count": 43,
@@ -1375,7 +1479,8 @@
     "dong_monthly_sales": 26897011685,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.2280531745262657
+    "competition_intensity": 1.2280531745262657,
+    "commercial_index": 2
   },
   "명일1동": {
     "low_cost_count": 15,
@@ -1388,7 +1493,8 @@
     "dong_monthly_sales": 2565452027,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.742418376564718
+    "competition_intensity": 3.742418376564718,
+    "commercial_index": 1
   },
   "명일2동": {
     "low_cost_count": 11,
@@ -1401,7 +1507,8 @@
     "dong_monthly_sales": 4383367634,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.073280062366011
+    "competition_intensity": 4.073280062366011,
+    "commercial_index": 2
   },
   "목1동": {
     "low_cost_count": 31,
@@ -1414,7 +1521,8 @@
     "dong_monthly_sales": 4780198096,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.198756300937485
+    "competition_intensity": 3.198756300937485,
+    "commercial_index": 4
   },
   "목2동": {
     "low_cost_count": 10,
@@ -1427,7 +1535,8 @@
     "dong_monthly_sales": 658631213,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.1758634378721715
+    "competition_intensity": 3.1758634378721715,
+    "commercial_index": 2
   },
   "목3동": {
     "low_cost_count": 9,
@@ -1440,7 +1549,8 @@
     "dong_monthly_sales": 870755997,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.5984848484848486
+    "competition_intensity": 3.5984848484848486,
+    "commercial_index": 2
   },
   "목4동": {
     "low_cost_count": 12,
@@ -1453,7 +1563,8 @@
     "dong_monthly_sales": 337205826,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 5.012307003803983
+    "competition_intensity": 5.012307003803983,
+    "commercial_index": 2
   },
   "목5동": {
     "low_cost_count": 14,
@@ -1466,7 +1577,8 @@
     "dong_monthly_sales": 1674226731,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.8889416231608922
+    "competition_intensity": 1.8889416231608922,
+    "commercial_index": 2
   },
   "무악동": {
     "low_cost_count": 2,
@@ -1479,7 +1591,8 @@
     "dong_monthly_sales": 506093663,
     "avg_op_days": 5876.392857142857,
     "closure_rate": 60.97560975609756,
-    "competition_intensity": 1.8758374274229568
+    "competition_intensity": 1.8758374274229568,
+    "commercial_index": 2
   },
   "묵1동": {
     "low_cost_count": 12,
@@ -1492,7 +1605,8 @@
     "dong_monthly_sales": 1690686186,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.318102639689133
+    "competition_intensity": 2.318102639689133,
+    "commercial_index": 4
   },
   "묵2동": {
     "low_cost_count": 6,
@@ -1505,7 +1619,8 @@
     "dong_monthly_sales": 241200992,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.663772691397001
+    "competition_intensity": 2.663772691397001,
+    "commercial_index": 2
   },
   "문래동": {
     "low_cost_count": 31,
@@ -1518,7 +1633,8 @@
     "dong_monthly_sales": 5116393802,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.796812749003984
+    "competition_intensity": 0.796812749003984,
+    "commercial_index": 2
   },
   "문정1동": {
     "low_cost_count": 5,
@@ -1531,7 +1647,8 @@
     "dong_monthly_sales": 378235612,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.9513499064421278
+    "competition_intensity": 1.9513499064421278,
+    "commercial_index": 4
   },
   "문정2동": {
     "low_cost_count": 45,
@@ -1544,7 +1661,8 @@
     "dong_monthly_sales": 6560164156,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.5742957320759279
+    "competition_intensity": 0.5742957320759279,
+    "commercial_index": 4
   },
   "미성동": {
     "low_cost_count": 9,
@@ -1557,7 +1675,8 @@
     "dong_monthly_sales": 777007473,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.8446389496717726
+    "competition_intensity": 2.8446389496717726,
+    "commercial_index": 2
   },
   "미아동": {
     "low_cost_count": 12,
@@ -1570,7 +1689,8 @@
     "dong_monthly_sales": 1023128643,
     "avg_op_days": 4395.789173789174,
     "closure_rate": 81.95926285160039,
-    "competition_intensity": 4.099433057130398
+    "competition_intensity": 4.099433057130398,
+    "commercial_index": 2
   },
   "반포1동": {
     "low_cost_count": 11,
@@ -1583,7 +1703,8 @@
     "dong_monthly_sales": 2195372857,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.609003272309189
+    "competition_intensity": 2.609003272309189,
+    "commercial_index": 2
   },
   "반포2동": {
     "low_cost_count": 2,
@@ -1596,7 +1717,8 @@
     "dong_monthly_sales": 351717903,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.0922900544568646
+    "competition_intensity": 2.0922900544568646,
+    "commercial_index": 2
   },
   "반포3동": {
     "low_cost_count": 5,
@@ -1609,7 +1731,8 @@
     "dong_monthly_sales": 1225497823,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.832208293153327
+    "competition_intensity": 1.832208293153327,
+    "commercial_index": 2
   },
   "반포4동": {
     "low_cost_count": 17,
@@ -1622,7 +1745,8 @@
     "dong_monthly_sales": 6099933834,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.269374370961982
+    "competition_intensity": 3.269374370961982,
+    "commercial_index": 2
   },
   "반포본동": {
     "low_cost_count": 1,
@@ -1635,7 +1759,8 @@
     "dong_monthly_sales": 2066483,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 14.095744680851062
+    "competition_intensity": 14.095744680851062,
+    "commercial_index": 4
   },
   "발산1동": {
     "low_cost_count": 39,
@@ -1648,7 +1773,8 @@
     "dong_monthly_sales": 3622508733,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.1803332067075487
+    "competition_intensity": 1.1803332067075487,
+    "commercial_index": 3
   },
   "방배1동": {
     "low_cost_count": 13,
@@ -1661,7 +1787,8 @@
     "dong_monthly_sales": 2696153873,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.3758797692755464
+    "competition_intensity": 1.3758797692755464,
+    "commercial_index": 2
   },
   "방배2동": {
     "low_cost_count": 9,
@@ -1674,7 +1801,8 @@
     "dong_monthly_sales": 3370514144,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.6042454556545078
+    "competition_intensity": 1.6042454556545078,
+    "commercial_index": 2
   },
   "방배3동": {
     "low_cost_count": 2,
@@ -1687,7 +1815,8 @@
     "dong_monthly_sales": 1056969628,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.247274313126908
+    "competition_intensity": 1.247274313126908,
+    "commercial_index": 2
   },
   "방배4동": {
     "low_cost_count": 7,
@@ -1700,7 +1829,8 @@
     "dong_monthly_sales": 2729794908,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4965224394172343
+    "competition_intensity": 2.4965224394172343,
+    "commercial_index": 2
   },
   "방배본동": {
     "low_cost_count": 13,
@@ -1713,7 +1843,8 @@
     "dong_monthly_sales": 4721904384,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.956434763280729
+    "competition_intensity": 3.956434763280729,
+    "commercial_index": 2
   },
   "방이1동": {
     "low_cost_count": 12,
@@ -1726,7 +1857,8 @@
     "dong_monthly_sales": 1441904555,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.2545275348034988
+    "competition_intensity": 2.2545275348034988,
+    "commercial_index": 4
   },
   "방이2동": {
     "low_cost_count": 26,
@@ -1739,7 +1871,8 @@
     "dong_monthly_sales": 3823761810,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.424717585567358
+    "competition_intensity": 1.424717585567358,
+    "commercial_index": 2
   },
   "방학1동": {
     "low_cost_count": 22,
@@ -1752,7 +1885,8 @@
     "dong_monthly_sales": 3069290396,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.499793063488122
+    "competition_intensity": 2.499793063488122,
+    "commercial_index": 4
   },
   "방학2동": {
     "low_cost_count": 3,
@@ -1765,7 +1899,8 @@
     "dong_monthly_sales": 531859333,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.2950819672131146
+    "competition_intensity": 2.2950819672131146,
+    "commercial_index": 2
   },
   "방학3동": {
     "low_cost_count": 3,
@@ -1778,7 +1913,8 @@
     "dong_monthly_sales": 272458504,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.4116318464144553
+    "competition_intensity": 1.4116318464144553,
+    "commercial_index": 2
   },
   "방화1동": {
     "low_cost_count": 26,
@@ -1791,7 +1927,8 @@
     "dong_monthly_sales": 1645898085,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.110320501125099
+    "competition_intensity": 2.110320501125099,
+    "commercial_index": 2
   },
   "방화2동": {
     "low_cost_count": 11,
@@ -1804,7 +1941,8 @@
     "dong_monthly_sales": 335120707,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.756825075834176
+    "competition_intensity": 1.756825075834176,
+    "commercial_index": 4
   },
   "방화3동": {
     "low_cost_count": 8,
@@ -1817,7 +1955,8 @@
     "dong_monthly_sales": 1605040642,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.4258754455860767
+    "competition_intensity": 1.4258754455860767,
+    "commercial_index": 2
   },
   "번1동": {
     "low_cost_count": 7,
@@ -1830,7 +1969,8 @@
     "dong_monthly_sales": 1495699649,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4481894784787066
+    "competition_intensity": 2.4481894784787066,
+    "commercial_index": 4
   },
   "번2동": {
     "low_cost_count": 1,
@@ -1843,7 +1983,8 @@
     "dong_monthly_sales": 211111440,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.0069044879171463
+    "competition_intensity": 1.0069044879171463,
+    "commercial_index": 2
   },
   "번3동": {
     "low_cost_count": 4,
@@ -1856,7 +1997,8 @@
     "dong_monthly_sales": 469953486,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.652634861241035
+    "competition_intensity": 1.652634861241035,
+    "commercial_index": 2
   },
   "보광동": {
     "low_cost_count": 2,
@@ -1869,7 +2011,8 @@
     "dong_monthly_sales": 240227718,
     "avg_op_days": 4325.901960784314,
     "closure_rate": 78.66666666666666,
-    "competition_intensity": 5.424696645253391
+    "competition_intensity": 5.424696645253391,
+    "commercial_index": 3
   },
   "보라매동": {
     "low_cost_count": 13,
@@ -1882,7 +2025,8 @@
     "dong_monthly_sales": 1829860477,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.8014616321559074
+    "competition_intensity": 2.8014616321559074,
+    "commercial_index": 4
   },
   "보문동": {
     "low_cost_count": 4,
@@ -1895,7 +2039,8 @@
     "dong_monthly_sales": 716021756,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.2459016393442623
+    "competition_intensity": 2.2459016393442623,
+    "commercial_index": 3
   },
   "부암동": {
     "low_cost_count": 2,
@@ -1908,7 +2053,8 @@
     "dong_monthly_sales": 883641396,
     "avg_op_days": 4814.477272727273,
     "closure_rate": 68.33333333333333,
-    "competition_intensity": 2.9737036126812484
+    "competition_intensity": 2.9737036126812484,
+    "commercial_index": 2
   },
   "북가좌2동": {
     "low_cost_count": 10,
@@ -1921,7 +2067,8 @@
     "dong_monthly_sales": 1008727363,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.504983388704319
+    "competition_intensity": 3.504983388704319,
+    "commercial_index": 2
   },
   "북아현동": {
     "low_cost_count": 5,
@@ -1934,7 +2081,8 @@
     "dong_monthly_sales": 118273285,
     "avg_op_days": 4558.919642857143,
     "closure_rate": 77.70700636942675,
-    "competition_intensity": 3.8810301051867975
+    "competition_intensity": 3.8810301051867975,
+    "commercial_index": 4
   },
   "불광1동": {
     "low_cost_count": 15,
@@ -1947,7 +2095,8 @@
     "dong_monthly_sales": 1130258956,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.5166444740346203
+    "competition_intensity": 2.5166444740346203,
+    "commercial_index": 2
   },
   "불광2동": {
     "low_cost_count": 3,
@@ -1960,7 +2109,8 @@
     "dong_monthly_sales": 333969384,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.7099056603773584
+    "competition_intensity": 1.7099056603773584,
+    "commercial_index": 2
   },
   "사근동": {
     "low_cost_count": 10,
@@ -1973,7 +2123,8 @@
     "dong_monthly_sales": 2554057475,
     "avg_op_days": 4412.434782608696,
     "closure_rate": 47.368421052631575,
-    "competition_intensity": 1.8513525658308618
+    "competition_intensity": 1.8513525658308618,
+    "commercial_index": 2
   },
   "사당1동": {
     "low_cost_count": 7,
@@ -1986,7 +2137,8 @@
     "dong_monthly_sales": 2745260592,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4685519720041618
+    "competition_intensity": 2.4685519720041618,
+    "commercial_index": 3
   },
   "사당2동": {
     "low_cost_count": 10,
@@ -1999,7 +2151,8 @@
     "dong_monthly_sales": 5057438761,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 5.136138613861386
+    "competition_intensity": 5.136138613861386,
+    "commercial_index": 4
   },
   "사당3동": {
     "low_cost_count": 6,
@@ -2012,7 +2165,8 @@
     "dong_monthly_sales": 995373976,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.2986125491820255
+    "competition_intensity": 2.2986125491820255,
+    "commercial_index": 2
   },
   "사당4동": {
     "low_cost_count": 3,
@@ -2025,7 +2179,8 @@
     "dong_monthly_sales": 386623773,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.9559339008512766
+    "competition_intensity": 3.9559339008512766,
+    "commercial_index": 2
   },
   "사당5동": {
     "low_cost_count": 5,
@@ -2038,7 +2193,8 @@
     "dong_monthly_sales": 200040395,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.3871808233454925
+    "competition_intensity": 3.3871808233454925,
+    "commercial_index": 2
   },
   "사직동": {
     "low_cost_count": 21,
@@ -2051,7 +2207,8 @@
     "dong_monthly_sales": 12900468906,
     "avg_op_days": 3898.1428571428573,
     "closure_rate": 56.666666666666664,
-    "competition_intensity": 1.053483177685151
+    "competition_intensity": 1.053483177685151,
+    "commercial_index": 2
   },
   "삼각산동": {
     "low_cost_count": 14,
@@ -2064,7 +2221,8 @@
     "dong_monthly_sales": 362478799,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.2298526183756664
+    "competition_intensity": 3.2298526183756664,
+    "commercial_index": 2
   },
   "삼선동": {
     "low_cost_count": 8,
@@ -2077,7 +2235,8 @@
     "dong_monthly_sales": 793285495,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.6211975103006924
+    "competition_intensity": 2.6211975103006924,
+    "commercial_index": 4
   },
   "삼성1동": {
     "low_cost_count": 47,
@@ -2090,7 +2249,8 @@
     "dong_monthly_sales": 11785338859,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.0838115658699627
+    "competition_intensity": 3.0838115658699627,
+    "commercial_index": 4
   },
   "삼성2동": {
     "low_cost_count": 20,
@@ -2103,7 +2263,8 @@
     "dong_monthly_sales": 4940170516,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.0976432352881058
+    "competition_intensity": 1.0976432352881058,
+    "commercial_index": 2
   },
   "삼양동": {
     "low_cost_count": 6,
@@ -2116,7 +2277,8 @@
     "dong_monthly_sales": 400429125,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.832244008714597
+    "competition_intensity": 2.832244008714597,
+    "commercial_index": 1
   },
   "삼전동": {
     "low_cost_count": 13,
@@ -2129,7 +2291,8 @@
     "dong_monthly_sales": 2651568736,
     "avg_op_days": 4426.107784431138,
     "closure_rate": 77.3076923076923,
-    "competition_intensity": 2.548519898059204
+    "competition_intensity": 2.548519898059204,
+    "commercial_index": 4
   },
   "삼청동": {
     "low_cost_count": 2,
@@ -2142,7 +2305,8 @@
     "dong_monthly_sales": 10423754035,
     "avg_op_days": 3625.7454545454543,
     "closure_rate": 71.91011235955057,
-    "competition_intensity": 5.678233438485805
+    "competition_intensity": 5.678233438485805,
+    "commercial_index": 2
   },
   "상계10동": {
     "low_cost_count": 3,
@@ -2155,7 +2319,8 @@
     "dong_monthly_sales": 162852437,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.1539688871160747
+    "competition_intensity": 2.1539688871160747,
+    "commercial_index": 2
   },
   "상계1동": {
     "low_cost_count": 18,
@@ -2168,7 +2333,8 @@
     "dong_monthly_sales": 1275940027,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.8468118195956456
+    "competition_intensity": 1.8468118195956456,
+    "commercial_index": 2
   },
   "상계2동": {
     "low_cost_count": 18,
@@ -2181,7 +2347,8 @@
     "dong_monthly_sales": 4689847081,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.097842765592563
+    "competition_intensity": 4.097842765592563,
+    "commercial_index": 2
   },
   "상계34동": {
     "low_cost_count": 10,
@@ -2194,7 +2361,8 @@
     "dong_monthly_sales": 564064112,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 11200.0
+    "competition_intensity": 11200.0,
+    "commercial_index": 2
   },
   "상계5동": {
     "low_cost_count": 7,
@@ -2207,7 +2375,8 @@
     "dong_monthly_sales": 696795493,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4373498111912117
+    "competition_intensity": 2.4373498111912117,
+    "commercial_index": 2
   },
   "상계67동": {
     "low_cost_count": 22,
@@ -2220,7 +2389,8 @@
     "dong_monthly_sales": 2207360857,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 22000.0
+    "competition_intensity": 22000.0,
+    "commercial_index": 2
   },
   "상계8동": {
     "low_cost_count": 6,
@@ -2233,7 +2403,8 @@
     "dong_monthly_sales": 753811461,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.8842530282637955
+    "competition_intensity": 1.8842530282637955,
+    "commercial_index": 2
   },
   "상계9동": {
     "low_cost_count": 3,
@@ -2246,7 +2417,8 @@
     "dong_monthly_sales": 924948324,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.6678752719361856
+    "competition_intensity": 1.6678752719361856,
+    "commercial_index": 2
   },
   "상도1동": {
     "low_cost_count": 19,
@@ -2259,7 +2431,8 @@
     "dong_monthly_sales": 3468503386,
     "avg_op_days": 4488.176470588235,
     "closure_rate": 71.96261682242991,
-    "competition_intensity": 2.6542015903718035
+    "competition_intensity": 2.6542015903718035,
+    "commercial_index": 2
   },
   "상도2동": {
     "low_cost_count": 13,
@@ -2272,7 +2445,8 @@
     "dong_monthly_sales": 725803859,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 5.194290245836638
+    "competition_intensity": 5.194290245836638,
+    "commercial_index": 2
   },
   "상도3동": {
     "low_cost_count": 4,
@@ -2285,7 +2459,8 @@
     "dong_monthly_sales": 1289212811,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.3546325878594248
+    "competition_intensity": 3.3546325878594248,
+    "commercial_index": 2
   },
   "상도4동": {
     "low_cost_count": 11,
@@ -2298,7 +2473,8 @@
     "dong_monthly_sales": 533218864,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.754295064085083
+    "competition_intensity": 2.754295064085083,
+    "commercial_index": 2
   },
   "상봉1동": {
     "low_cost_count": 9,
@@ -2311,7 +2487,8 @@
     "dong_monthly_sales": 398052533,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.6398077466779757
+    "competition_intensity": 1.6398077466779757,
+    "commercial_index": 4
   },
   "상봉2동": {
     "low_cost_count": 19,
@@ -2324,7 +2501,8 @@
     "dong_monthly_sales": 1578063986,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.8408501814411613
+    "competition_intensity": 2.8408501814411613,
+    "commercial_index": 2
   },
   "상암동": {
     "low_cost_count": 41,
@@ -2337,7 +2515,8 @@
     "dong_monthly_sales": 7974491766,
     "avg_op_days": 4027.0559210526317,
     "closure_rate": 66.38830897703549,
-    "competition_intensity": 1.0527472527472528
+    "competition_intensity": 1.0527472527472528,
+    "commercial_index": 2
   },
   "상일동": {
     "low_cost_count": 8,
@@ -2350,7 +2529,8 @@
     "dong_monthly_sales": 1077655529,
     "avg_op_days": 4283.820512820513,
     "closure_rate": 64.67391304347827,
-    "competition_intensity": 15400.0
+    "competition_intensity": 15400.0,
+    "commercial_index": 2
   },
   "서강동": {
     "low_cost_count": 15,
@@ -2363,7 +2543,8 @@
     "dong_monthly_sales": 4823722980,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.892483724600513
+    "competition_intensity": 4.892483724600513,
+    "commercial_index": 4
   },
   "서교동": {
     "low_cost_count": 55,
@@ -2376,7 +2557,8 @@
     "dong_monthly_sales": 30553895743,
     "avg_op_days": 4044.0237050043897,
     "closure_rate": 79.73921765295887,
-    "competition_intensity": 4.265372272661302
+    "competition_intensity": 4.265372272661302,
+    "commercial_index": 4
   },
   "서림동": {
     "low_cost_count": 6,
@@ -2389,7 +2571,8 @@
     "dong_monthly_sales": 505203803,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.6585365853658534
+    "competition_intensity": 3.6585365853658534,
+    "commercial_index": 2
   },
   "서원동": {
     "low_cost_count": 13,
@@ -2402,7 +2585,8 @@
     "dong_monthly_sales": 3534757110,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.902176632474356
+    "competition_intensity": 2.902176632474356,
+    "commercial_index": 4
   },
   "서초1동": {
     "low_cost_count": 23,
@@ -2415,7 +2599,8 @@
     "dong_monthly_sales": 3327056774,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.2635428321916875
+    "competition_intensity": 1.2635428321916875,
+    "commercial_index": 2
   },
   "서초2동": {
     "low_cost_count": 25,
@@ -2428,7 +2613,8 @@
     "dong_monthly_sales": 8249469127,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.6136074353370639
+    "competition_intensity": 0.6136074353370639,
+    "commercial_index": 2
   },
   "서초3동": {
     "low_cost_count": 41,
@@ -2441,7 +2627,8 @@
     "dong_monthly_sales": 13699365208,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.9484042208843141
+    "competition_intensity": 0.9484042208843141,
+    "commercial_index": 1
   },
   "서초4동": {
     "low_cost_count": 22,
@@ -2454,7 +2641,8 @@
     "dong_monthly_sales": 6401621273,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.4769001993984252
+    "competition_intensity": 1.4769001993984252,
+    "commercial_index": 2
   },
   "석관동": {
     "low_cost_count": 14,
@@ -2467,7 +2655,8 @@
     "dong_monthly_sales": 1571969348,
     "avg_op_days": 4576.960264900662,
     "closure_rate": 75.70093457943925,
-    "competition_intensity": 2.256431885280472
+    "competition_intensity": 2.256431885280472,
+    "commercial_index": 2
   },
   "석촌동": {
     "low_cost_count": 21,
@@ -2480,7 +2669,8 @@
     "dong_monthly_sales": 3586866599,
     "avg_op_days": 3934.3417721518986,
     "closure_rate": 79.04761904761905,
-    "competition_intensity": 2.562687756728588
+    "competition_intensity": 2.562687756728588,
+    "commercial_index": 4
   },
   "성내1동": {
     "low_cost_count": 15,
@@ -2493,7 +2683,8 @@
     "dong_monthly_sales": 1630638823,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.4650749802683505
+    "competition_intensity": 1.4650749802683505,
+    "commercial_index": 1
   },
   "성내2동": {
     "low_cost_count": 13,
@@ -2506,7 +2697,8 @@
     "dong_monthly_sales": 1271876789,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.8545547989207245
+    "competition_intensity": 3.8545547989207245,
+    "commercial_index": 2
   },
   "성내3동": {
     "low_cost_count": 15,
@@ -2519,7 +2711,8 @@
     "dong_monthly_sales": 3004963757,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.141155515974618
+    "competition_intensity": 4.141155515974618,
+    "commercial_index": 2
   },
   "성북동": {
     "low_cost_count": 7,
@@ -2532,7 +2725,8 @@
     "dong_monthly_sales": 1838224242,
     "avg_op_days": 4333.101449275362,
     "closure_rate": 66.05504587155964,
-    "competition_intensity": 2.55790819951684
+    "competition_intensity": 2.55790819951684,
+    "commercial_index": 2
   },
   "성산1동": {
     "low_cost_count": 9,
@@ -2545,7 +2739,8 @@
     "dong_monthly_sales": 679435266,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.6446080350849717
+    "competition_intensity": 1.6446080350849717,
+    "commercial_index": 4
   },
   "성산2동": {
     "low_cost_count": 15,
@@ -2558,7 +2753,8 @@
     "dong_monthly_sales": 2620182706,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.2573909138537536
+    "competition_intensity": 1.2573909138537536,
+    "commercial_index": 1
   },
   "성수1가1동": {
     "low_cost_count": 11,
@@ -2571,7 +2767,8 @@
     "dong_monthly_sales": 1341763253,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.2174643157010916
+    "competition_intensity": 1.2174643157010916,
+    "commercial_index": 4
   },
   "성수1가2동": {
     "low_cost_count": 19,
@@ -2584,7 +2781,8 @@
     "dong_monthly_sales": 6493364499,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.2630662020905923
+    "competition_intensity": 1.2630662020905923,
+    "commercial_index": 2
   },
   "성수2가1동": {
     "low_cost_count": 7,
@@ -2597,7 +2795,8 @@
     "dong_monthly_sales": 2539631440,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.6164670310501221
+    "competition_intensity": 1.6164670310501221,
+    "commercial_index": 4
   },
   "성수2가3동": {
     "low_cost_count": 22,
@@ -2610,7 +2809,8 @@
     "dong_monthly_sales": 6962173703,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.6712255380833833
+    "competition_intensity": 0.6712255380833833,
+    "commercial_index": 2
   },
   "성현동": {
     "low_cost_count": 1,
@@ -2623,7 +2823,8 @@
     "dong_monthly_sales": 86395215,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.515723270440252
+    "competition_intensity": 2.515723270440252,
+    "commercial_index": 2
   },
   "세곡동": {
     "low_cost_count": 13,
@@ -2636,7 +2837,8 @@
     "dong_monthly_sales": 2051332298,
     "avg_op_days": 5317.090909090909,
     "closure_rate": 52.94117647058824,
-    "competition_intensity": 1.420593710198883
+    "competition_intensity": 1.420593710198883,
+    "commercial_index": 2
   },
   "소공동": {
     "low_cost_count": 21,
@@ -2649,7 +2851,8 @@
     "dong_monthly_sales": 22030383589,
     "avg_op_days": 4686.073529411765,
     "closure_rate": 82.92682926829268,
-    "competition_intensity": 1.2210787842854924
+    "competition_intensity": 1.2210787842854924,
+    "commercial_index": 2
   },
   "송정동": {
     "low_cost_count": 1,
@@ -2662,7 +2865,8 @@
     "dong_monthly_sales": 111174749,
     "avg_op_days": 5315.086956521739,
     "closure_rate": 69.01408450704226,
-    "competition_intensity": 2.5357142857142856
+    "competition_intensity": 2.5357142857142856,
+    "commercial_index": 3
   },
   "송중동": {
     "low_cost_count": 15,
@@ -2675,7 +2879,8 @@
     "dong_monthly_sales": 2365171908,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.352719808416011
+    "competition_intensity": 3.352719808416011,
+    "commercial_index": 2
   },
   "송천동": {
     "low_cost_count": 13,
@@ -2688,7 +2893,8 @@
     "dong_monthly_sales": 752802967,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.298082869511441
+    "competition_intensity": 4.298082869511441,
+    "commercial_index": 2
   },
   "송파1동": {
     "low_cost_count": 9,
@@ -2701,7 +2907,8 @@
     "dong_monthly_sales": 2835042037,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.5154113228937858
+    "competition_intensity": 2.5154113228937858,
+    "commercial_index": 4
   },
   "송파2동": {
     "low_cost_count": 8,
@@ -2714,7 +2921,8 @@
     "dong_monthly_sales": 1500423934,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.2958262143031485
+    "competition_intensity": 4.2958262143031485,
+    "commercial_index": 2
   },
   "수궁동": {
     "low_cost_count": 9,
@@ -2727,7 +2935,8 @@
     "dong_monthly_sales": 432513780,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.6685566175279443
+    "competition_intensity": 1.6685566175279443,
+    "commercial_index": 4
   },
   "수색동": {
     "low_cost_count": 4,
@@ -2740,7 +2949,8 @@
     "dong_monthly_sales": 74714292,
     "avg_op_days": 4693.686274509804,
     "closure_rate": 75.0,
-    "competition_intensity": 1.9165727170236753
+    "competition_intensity": 1.9165727170236753,
+    "commercial_index": 3
   },
   "수서동": {
     "low_cost_count": 10,
@@ -2753,7 +2963,8 @@
     "dong_monthly_sales": 2577049849,
     "avg_op_days": 4019.710843373494,
     "closure_rate": 55.88235294117647,
-    "competition_intensity": 0.7333493628276028
+    "competition_intensity": 0.7333493628276028,
+    "commercial_index": 2
   },
   "수유1동": {
     "low_cost_count": 4,
@@ -2766,7 +2977,8 @@
     "dong_monthly_sales": 385354135,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.306625043357614
+    "competition_intensity": 2.306625043357614,
+    "commercial_index": 4
   },
   "수유2동": {
     "low_cost_count": 7,
@@ -2779,7 +2991,8 @@
     "dong_monthly_sales": 335008382,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.729357798165138
+    "competition_intensity": 2.729357798165138,
+    "commercial_index": 2
   },
   "수유3동": {
     "low_cost_count": 18,
@@ -2792,7 +3005,8 @@
     "dong_monthly_sales": 2226202044,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.0588808312587945
+    "competition_intensity": 4.0588808312587945,
+    "commercial_index": 2
   },
   "숭인1동": {
     "low_cost_count": 4,
@@ -2805,7 +3019,8 @@
     "dong_monthly_sales": 37602347,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.083333333333333
+    "competition_intensity": 2.083333333333333,
+    "commercial_index": 2
   },
   "숭인2동": {
     "low_cost_count": 8,
@@ -2818,7 +3033,8 @@
     "dong_monthly_sales": 824438982,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.2341676465647575
+    "competition_intensity": 2.2341676465647575,
+    "commercial_index": 2
   },
   "시흥1동": {
     "low_cost_count": 28,
@@ -2831,7 +3047,8 @@
     "dong_monthly_sales": 2783852354,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.0318538470546903
+    "competition_intensity": 2.0318538470546903,
+    "commercial_index": 2
   },
   "시흥2동": {
     "low_cost_count": 4,
@@ -2844,7 +3061,8 @@
     "dong_monthly_sales": 97677211,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.4100185528756959
+    "competition_intensity": 1.4100185528756959,
+    "commercial_index": 2
   },
   "시흥3동": {
     "low_cost_count": 3,
@@ -2857,7 +3075,8 @@
     "dong_monthly_sales": 325788028,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.843558282208589
+    "competition_intensity": 0.843558282208589,
+    "commercial_index": 2
   },
   "시흥4동": {
     "low_cost_count": 3,
@@ -2870,7 +3089,8 @@
     "dong_monthly_sales": 164078109,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.628001812415043
+    "competition_intensity": 2.628001812415043,
+    "commercial_index": 2
   },
   "시흥5동": {
     "low_cost_count": 8,
@@ -2883,7 +3103,8 @@
     "dong_monthly_sales": 561389676,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.1035429826970615
+    "competition_intensity": 3.1035429826970615,
+    "commercial_index": 2
   },
   "신길1동": {
     "low_cost_count": 9,
@@ -2896,7 +3117,8 @@
     "dong_monthly_sales": 835592459,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.864050585828529
+    "competition_intensity": 2.864050585828529,
+    "commercial_index": 2
   },
   "신길3동": {
     "low_cost_count": 3,
@@ -2909,7 +3131,8 @@
     "dong_monthly_sales": 56766748,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.3659066232356136
+    "competition_intensity": 3.3659066232356136,
+    "commercial_index": 2
   },
   "신길4동": {
     "low_cost_count": 1,
@@ -2922,7 +3145,8 @@
     "dong_monthly_sales": 134686268,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.711864406779661
+    "competition_intensity": 2.711864406779661,
+    "commercial_index": 2
   },
   "신길5동": {
     "low_cost_count": 6,
@@ -2935,7 +3159,8 @@
     "dong_monthly_sales": 82284827,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.28287841191067
+    "competition_intensity": 2.28287841191067,
+    "commercial_index": 3
   },
   "신길6동": {
     "low_cost_count": 12,
@@ -2948,7 +3173,8 @@
     "dong_monthly_sales": 1273501676,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.798708288482239
+    "competition_intensity": 2.798708288482239,
+    "commercial_index": 2
   },
   "신길7동": {
     "low_cost_count": 7,
@@ -2961,7 +3187,8 @@
     "dong_monthly_sales": 386965091,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.7592480291085506
+    "competition_intensity": 2.7592480291085506,
+    "commercial_index": 2
   },
   "신내1동": {
     "low_cost_count": 18,
@@ -2974,7 +3201,8 @@
     "dong_monthly_sales": 1156580941,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.8556082937796652
+    "competition_intensity": 0.8556082937796652,
+    "commercial_index": 3
   },
   "신내2동": {
     "low_cost_count": 10,
@@ -2987,7 +3215,8 @@
     "dong_monthly_sales": 1004328252,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.1097852028639619
+    "competition_intensity": 1.1097852028639619,
+    "commercial_index": 2
   },
   "신당5동": {
     "low_cost_count": 4,
@@ -3000,7 +3229,8 @@
     "dong_monthly_sales": 657548807,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.0677628300946687
+    "competition_intensity": 2.0677628300946687,
+    "commercial_index": 2
   },
   "신당동": {
     "low_cost_count": 14,
@@ -3013,7 +3243,8 @@
     "dong_monthly_sales": 1178646108,
     "avg_op_days": 4976.156682027649,
     "closure_rate": 63.1578947368421,
-    "competition_intensity": 1.4602125569348934
+    "competition_intensity": 1.4602125569348934,
+    "commercial_index": 2
   },
   "신대방1동": {
     "low_cost_count": 7,
@@ -3026,7 +3257,8 @@
     "dong_monthly_sales": 572147782,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.0742744712247907
+    "competition_intensity": 3.0742744712247907,
+    "commercial_index": 3
   },
   "신대방2동": {
     "low_cost_count": 9,
@@ -3039,7 +3271,8 @@
     "dong_monthly_sales": 3067130346,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.170517276630546
+    "competition_intensity": 1.170517276630546,
+    "commercial_index": 2
   },
   "신도림동": {
     "low_cost_count": 19,
@@ -3052,7 +3285,8 @@
     "dong_monthly_sales": 1154276941,
     "avg_op_days": 4171.762376237623,
     "closure_rate": 80.85106382978722,
-    "competition_intensity": 1.8730013704888075
+    "competition_intensity": 1.8730013704888075,
+    "commercial_index": 4
   },
   "신림동": {
     "low_cost_count": 20,
@@ -3065,7 +3299,8 @@
     "dong_monthly_sales": 1768198790,
     "avg_op_days": 4240.034372501998,
     "closure_rate": 75.05446623093682,
-    "competition_intensity": 5.821025195482189
+    "competition_intensity": 5.821025195482189,
+    "commercial_index": 2
   },
   "신사1동": {
     "low_cost_count": 11,
@@ -3078,7 +3313,8 @@
     "dong_monthly_sales": 1315276983,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4788732394366195
+    "competition_intensity": 2.4788732394366195,
+    "commercial_index": 4
   },
   "신사2동": {
     "low_cost_count": 2,
@@ -3091,7 +3327,8 @@
     "dong_monthly_sales": 241904323,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.4600179694519317
+    "competition_intensity": 1.4600179694519317,
+    "commercial_index": 2
   },
   "신사동": {
     "low_cost_count": 17,
@@ -3104,7 +3341,8 @@
     "dong_monthly_sales": 8197274789,
     "avg_op_days": 3975.3526058631924,
     "closure_rate": 77.36240913811008,
-    "competition_intensity": 4.792353113887711
+    "competition_intensity": 4.792353113887711,
+    "commercial_index": 2
   },
   "신수동": {
     "low_cost_count": 2,
@@ -3117,7 +3355,8 @@
     "dong_monthly_sales": 1677260221,
     "avg_op_days": 4550.4795918367345,
     "closure_rate": 73.29192546583852,
-    "competition_intensity": 2.1454112038140645
+    "competition_intensity": 2.1454112038140645,
+    "commercial_index": 4
   },
   "신원동": {
     "low_cost_count": 4,
@@ -3130,7 +3369,8 @@
     "dong_monthly_sales": 312563496,
     "avg_op_days": 4444.633333333333,
     "closure_rate": 48.888888888888886,
-    "competition_intensity": 3.3175355450236967
+    "competition_intensity": 3.3175355450236967,
+    "commercial_index": 2
   },
   "신월1동": {
     "low_cost_count": 5,
@@ -3143,7 +3383,8 @@
     "dong_monthly_sales": 589752222,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.7620128641695043
+    "competition_intensity": 2.7620128641695043,
+    "commercial_index": 4
   },
   "신월2동": {
     "low_cost_count": 3,
@@ -3156,7 +3397,8 @@
     "dong_monthly_sales": 274070588,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.100840336134454
+    "competition_intensity": 2.100840336134454,
+    "commercial_index": 2
   },
   "신월3동": {
     "low_cost_count": 7,
@@ -3169,7 +3411,8 @@
     "dong_monthly_sales": 478536536,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.7413422030913714
+    "competition_intensity": 1.7413422030913714,
+    "commercial_index": 2
   },
   "신월4동": {
     "low_cost_count": 5,
@@ -3182,7 +3425,8 @@
     "dong_monthly_sales": 464856474,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.136215129429505
+    "competition_intensity": 2.136215129429505,
+    "commercial_index": 2
   },
   "신월5동": {
     "low_cost_count": 7,
@@ -3195,7 +3439,8 @@
     "dong_monthly_sales": 473808082,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4042950513538752
+    "competition_intensity": 2.4042950513538752,
+    "commercial_index": 2
   },
   "신월6동": {
     "low_cost_count": 6,
@@ -3208,7 +3453,8 @@
     "dong_monthly_sales": 62323617,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.083333333333333
+    "competition_intensity": 2.083333333333333,
+    "commercial_index": 2
   },
   "신월7동": {
     "low_cost_count": 7,
@@ -3221,7 +3467,8 @@
     "dong_monthly_sales": 352439894,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.0614621110899027
+    "competition_intensity": 2.0614621110899027,
+    "commercial_index": 2
   },
   "신정1동": {
     "low_cost_count": 10,
@@ -3234,7 +3481,8 @@
     "dong_monthly_sales": 597050937,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.7194885703215808
+    "competition_intensity": 3.7194885703215808,
+    "commercial_index": 2
   },
   "신정2동": {
     "low_cost_count": 7,
@@ -3247,7 +3495,8 @@
     "dong_monthly_sales": 1089500784,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.557046979865772
+    "competition_intensity": 3.557046979865772,
+    "commercial_index": 2
   },
   "신정3동": {
     "low_cost_count": 13,
@@ -3260,7 +3509,8 @@
     "dong_monthly_sales": 1425236605,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.3647010897240046
+    "competition_intensity": 1.3647010897240046,
+    "commercial_index": 2
   },
   "신정4동": {
     "low_cost_count": 16,
@@ -3273,7 +3523,8 @@
     "dong_monthly_sales": 2063901019,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.5001498890820795
+    "competition_intensity": 2.5001498890820795,
+    "commercial_index": 2
   },
   "신정6동": {
     "low_cost_count": 4,
@@ -3286,7 +3537,8 @@
     "dong_monthly_sales": 478570520,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.1378498561339263
+    "competition_intensity": 1.1378498561339263,
+    "commercial_index": 2
   },
   "신정7동": {
     "low_cost_count": 12,
@@ -3299,7 +3551,8 @@
     "dong_monthly_sales": 1887812169,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.4753688422105526
+    "competition_intensity": 1.4753688422105526,
+    "commercial_index": 2
   },
   "신촌동": {
     "low_cost_count": 47,
@@ -3312,7 +3565,8 @@
     "dong_monthly_sales": 10917316678,
     "avg_op_days": 4340.45652173913,
     "closure_rate": 56.25,
-    "competition_intensity": 3.5572798557416463
+    "competition_intensity": 3.5572798557416463,
+    "commercial_index": 4
   },
   "쌍문1동": {
     "low_cost_count": 7,
@@ -3325,7 +3579,8 @@
     "dong_monthly_sales": 557710843,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.9577120508433143
+    "competition_intensity": 2.9577120508433143,
+    "commercial_index": 4
   },
   "쌍문2동": {
     "low_cost_count": 9,
@@ -3338,7 +3593,8 @@
     "dong_monthly_sales": 542408855,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.9282576866764276
+    "competition_intensity": 2.9282576866764276,
+    "commercial_index": 2
   },
   "쌍문3동": {
     "low_cost_count": 10,
@@ -3351,7 +3607,8 @@
     "dong_monthly_sales": 707637022,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.8975719240971232
+    "competition_intensity": 1.8975719240971232,
+    "commercial_index": 2
   },
   "쌍문4동": {
     "low_cost_count": 5,
@@ -3364,7 +3621,8 @@
     "dong_monthly_sales": 139244870,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.7833259028087385
+    "competition_intensity": 1.7833259028087385,
+    "commercial_index": 2
   },
   "아현동": {
     "low_cost_count": 23,
@@ -3377,7 +3635,8 @@
     "dong_monthly_sales": 1514911148,
     "avg_op_days": 4711.425742574257,
     "closure_rate": 72.07792207792207,
-    "competition_intensity": 1.8167580266249022
+    "competition_intensity": 1.8167580266249022,
+    "commercial_index": 2
   },
   "안암동": {
     "low_cost_count": 20,
@@ -3390,7 +3649,8 @@
     "dong_monthly_sales": 5469891745,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.0498201316771874
+    "competition_intensity": 2.0498201316771874,
+    "commercial_index": 1
   },
   "암사1동": {
     "low_cost_count": 11,
@@ -3403,7 +3663,8 @@
     "dong_monthly_sales": 688090269,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.388319215336603
+    "competition_intensity": 3.388319215336603,
+    "commercial_index": 4
   },
   "암사2동": {
     "low_cost_count": 6,
@@ -3416,7 +3677,8 @@
     "dong_monthly_sales": 819192126,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.0025020850708923
+    "competition_intensity": 3.0025020850708923,
+    "commercial_index": 2
   },
   "암사3동": {
     "low_cost_count": 3,
@@ -3429,7 +3691,8 @@
     "dong_monthly_sales": 806451353,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.9035116508040695
+    "competition_intensity": 1.9035116508040695,
+    "commercial_index": 2
   },
   "압구정동": {
     "low_cost_count": 17,
@@ -3442,7 +3705,8 @@
     "dong_monthly_sales": 8226646288,
     "avg_op_days": 4299.24430641822,
     "closure_rate": 89.33161953727506,
-    "competition_intensity": 3.8856465154021413
+    "competition_intensity": 3.8856465154021413,
+    "commercial_index": 2
   },
   "약수동": {
     "low_cost_count": 5,
@@ -3455,7 +3719,8 @@
     "dong_monthly_sales": 711973769,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.2154850746268657
+    "competition_intensity": 2.2154850746268657,
+    "commercial_index": 2
   },
   "양재1동": {
     "low_cost_count": 30,
@@ -3468,7 +3733,8 @@
     "dong_monthly_sales": 5883459409,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.9928965119286864
+    "competition_intensity": 0.9928965119286864,
+    "commercial_index": 1
   },
   "양재2동": {
     "low_cost_count": 23,
@@ -3481,7 +3747,8 @@
     "dong_monthly_sales": 8990516380,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.3271493394370157
+    "competition_intensity": 1.3271493394370157,
+    "commercial_index": 4
   },
   "양평1동": {
     "low_cost_count": 19,
@@ -3494,7 +3761,8 @@
     "dong_monthly_sales": 1392000779,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.9349496870295539
+    "competition_intensity": 0.9349496870295539,
+    "commercial_index": 1
   },
   "양평2동": {
     "low_cost_count": 21,
@@ -3507,7 +3775,8 @@
     "dong_monthly_sales": 2631811176,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.2071269487750556
+    "competition_intensity": 1.2071269487750556,
+    "commercial_index": 2
   },
   "여의동": {
     "low_cost_count": 68,
@@ -3520,7 +3789,8 @@
     "dong_monthly_sales": 24192857166,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.7421942092196552
+    "competition_intensity": 0.7421942092196552,
+    "commercial_index": 4
   },
   "역삼1동": {
     "low_cost_count": 76,
@@ -3533,7 +3803,8 @@
     "dong_monthly_sales": 36750575071,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.1380965828861902
+    "competition_intensity": 1.1380965828861902,
+    "commercial_index": 1
   },
   "역삼2동": {
     "low_cost_count": 34,
@@ -3546,7 +3817,8 @@
     "dong_monthly_sales": 8479289250,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.397577201866746
+    "competition_intensity": 1.397577201866746,
+    "commercial_index": 2
   },
   "역촌동": {
     "low_cost_count": 13,
@@ -3559,7 +3831,8 @@
     "dong_monthly_sales": 1013492285,
     "avg_op_days": 4486.415300546448,
     "closure_rate": 72.79151943462897,
-    "competition_intensity": 2.8220992076413767
+    "competition_intensity": 2.8220992076413767,
+    "commercial_index": 4
   },
   "연남동": {
     "low_cost_count": 4,
@@ -3572,7 +3845,8 @@
     "dong_monthly_sales": 5160473269,
     "avg_op_days": 3955.35223880597,
     "closure_rate": 66.89774696707106,
-    "competition_intensity": 6.575528188905208
+    "competition_intensity": 6.575528188905208,
+    "commercial_index": 4
   },
   "연희동": {
     "low_cost_count": 7,
@@ -3585,7 +3859,8 @@
     "dong_monthly_sales": 4906119161,
     "avg_op_days": 4242.894117647059,
     "closure_rate": 71.51051625239006,
-    "competition_intensity": 3.990465938797478
+    "competition_intensity": 3.990465938797478,
+    "commercial_index": 4
   },
   "염리동": {
     "low_cost_count": 4,
@@ -3598,7 +3873,8 @@
     "dong_monthly_sales": 2249662218,
     "avg_op_days": 4684.828947368421,
     "closure_rate": 67.76859504132231,
-    "competition_intensity": 2.010447997467152
+    "competition_intensity": 2.010447997467152,
+    "commercial_index": 2
   },
   "염창동": {
     "low_cost_count": 25,
@@ -3611,7 +3887,8 @@
     "dong_monthly_sales": 3788793879,
     "avg_op_days": 4716.833333333333,
     "closure_rate": 69.02654867256636,
-    "competition_intensity": 1.406356483489251
+    "competition_intensity": 1.406356483489251,
+    "commercial_index": 4
   },
   "영등포동": {
     "low_cost_count": 47,
@@ -3624,7 +3901,8 @@
     "dong_monthly_sales": 4828279305,
     "avg_op_days": 4410.704225352113,
     "closure_rate": 77.72511848341233,
-    "competition_intensity": 1.9880506584760382
+    "competition_intensity": 1.9880506584760382,
+    "commercial_index": 2
   },
   "영등포본동": {
     "low_cost_count": 10,
@@ -3637,7 +3915,8 @@
     "dong_monthly_sales": 1068110040,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.282982791586997
+    "competition_intensity": 4.282982791586997,
+    "commercial_index": 4
   },
   "오금동": {
     "low_cost_count": 8,
@@ -3650,7 +3929,8 @@
     "dong_monthly_sales": 2964831093,
     "avg_op_days": 4481.882681564246,
     "closure_rate": 68.70229007633588,
-    "competition_intensity": 1.3350998777007745
+    "competition_intensity": 1.3350998777007745,
+    "commercial_index": 3
   },
   "오류1동": {
     "low_cost_count": 10,
@@ -3663,7 +3943,8 @@
     "dong_monthly_sales": 1162790666,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.1574894108586835
+    "competition_intensity": 3.1574894108586835,
+    "commercial_index": 3
   },
   "오류2동": {
     "low_cost_count": 13,
@@ -3676,7 +3957,8 @@
     "dong_monthly_sales": 700891508,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.7435897435897436
+    "competition_intensity": 1.7435897435897436,
+    "commercial_index": 4
   },
   "오륜동": {
     "low_cost_count": 4,
@@ -3689,7 +3971,8 @@
     "dong_monthly_sales": 519643414,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.016359140194027
+    "competition_intensity": 2.016359140194027,
+    "commercial_index": 2
   },
   "옥수동": {
     "low_cost_count": 4,
@@ -3702,7 +3985,8 @@
     "dong_monthly_sales": 381687541,
     "avg_op_days": 4903.6511627906975,
     "closure_rate": 77.16535433070865,
-    "competition_intensity": 2.6848409748038
+    "competition_intensity": 2.6848409748038,
+    "commercial_index": 2
   },
   "왕십리2동": {
     "low_cost_count": 2,
@@ -3715,7 +3999,8 @@
     "dong_monthly_sales": 436020087,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.015267175572519
+    "competition_intensity": 3.015267175572519,
+    "commercial_index": 1
   },
   "왕십리도선동": {
     "low_cost_count": 17,
@@ -3728,7 +4013,8 @@
     "dong_monthly_sales": 491680131,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.7560256279873894
+    "competition_intensity": 2.7560256279873894,
+    "commercial_index": 4
   },
   "용강동": {
     "low_cost_count": 15,
@@ -3741,7 +4027,8 @@
     "dong_monthly_sales": 1755974339,
     "avg_op_days": 4929.140350877193,
     "closure_rate": 80.48780487804879,
-    "competition_intensity": 1.4516213252571666
+    "competition_intensity": 1.4516213252571666,
+    "commercial_index": 4
   },
   "용답동": {
     "low_cost_count": 7,
@@ -3754,7 +4041,8 @@
     "dong_monthly_sales": 1032733161,
     "avg_op_days": 5690.833333333333,
     "closure_rate": 81.5028901734104,
-    "competition_intensity": 1.3302575932333718
+    "competition_intensity": 1.3302575932333718,
+    "commercial_index": 2
   },
   "용문동": {
     "low_cost_count": 3,
@@ -3767,7 +4055,8 @@
     "dong_monthly_sales": 202882929,
     "avg_op_days": 5279.1612903225805,
     "closure_rate": 69.76744186046511,
-    "competition_intensity": 2.512562814070352
+    "competition_intensity": 2.512562814070352,
+    "commercial_index": 3
   },
   "용산2가동": {
     "low_cost_count": 4,
@@ -3780,7 +4069,8 @@
     "dong_monthly_sales": 1155358724,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 6.183664051684356
+    "competition_intensity": 6.183664051684356,
+    "commercial_index": 4
   },
   "용신동": {
     "low_cost_count": 25,
@@ -3793,7 +4083,8 @@
     "dong_monthly_sales": 3012870176,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.5628220100295391
+    "competition_intensity": 1.5628220100295391,
+    "commercial_index": 2
   },
   "우이동": {
     "low_cost_count": 7,
@@ -3806,7 +4097,8 @@
     "dong_monthly_sales": 2207334590,
     "avg_op_days": 4928.490196078431,
     "closure_rate": 65.38461538461539,
-    "competition_intensity": 2.9895931882686853
+    "competition_intensity": 2.9895931882686853,
+    "commercial_index": 2
   },
   "우장산동": {
     "low_cost_count": 13,
@@ -3819,7 +4111,8 @@
     "dong_monthly_sales": 1155343473,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4482354473238703
+    "competition_intensity": 2.4482354473238703,
+    "commercial_index": 2
   },
   "원효로1동": {
     "low_cost_count": 10,
@@ -3832,7 +4125,8 @@
     "dong_monthly_sales": 1223169633,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.768652165074202
+    "competition_intensity": 1.768652165074202,
+    "commercial_index": 2
   },
   "원효로2동": {
     "low_cost_count": 4,
@@ -3845,7 +4139,8 @@
     "dong_monthly_sales": 584657039,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.6467065868263475
+    "competition_intensity": 1.6467065868263475,
+    "commercial_index": 2
   },
   "월계1동": {
     "low_cost_count": 13,
@@ -3858,7 +4153,8 @@
     "dong_monthly_sales": 964024553,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.693452380952381
+    "competition_intensity": 2.693452380952381,
+    "commercial_index": 2
   },
   "월계2동": {
     "low_cost_count": 9,
@@ -3871,7 +4167,8 @@
     "dong_monthly_sales": 371689390,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.4917825537294565
+    "competition_intensity": 1.4917825537294565,
+    "commercial_index": 2
   },
   "월계3동": {
     "low_cost_count": 3,
@@ -3884,7 +4181,8 @@
     "dong_monthly_sales": 349772562,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.807482135350988
+    "competition_intensity": 1.807482135350988,
+    "commercial_index": 2
   },
   "월곡1동": {
     "low_cost_count": 10,
@@ -3897,7 +4195,8 @@
     "dong_monthly_sales": 883083551,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.5118566660811523
+    "competition_intensity": 2.5118566660811523,
+    "commercial_index": 2
   },
   "월곡2동": {
     "low_cost_count": 12,
@@ -3910,7 +4209,8 @@
     "dong_monthly_sales": 957049022,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.81782450623956
+    "competition_intensity": 1.81782450623956,
+    "commercial_index": 1
   },
   "위례동": {
     "low_cost_count": 15,
@@ -3923,7 +4223,8 @@
     "dong_monthly_sales": 2952360748,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.486697965571205
+    "competition_intensity": 1.486697965571205,
+    "commercial_index": 2
   },
   "은천동": {
     "low_cost_count": 12,
@@ -3936,7 +4237,8 @@
     "dong_monthly_sales": 930524819,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.1118648406501985
+    "competition_intensity": 2.1118648406501985,
+    "commercial_index": 2
   },
   "을지로동": {
     "low_cost_count": 16,
@@ -3949,7 +4251,8 @@
     "dong_monthly_sales": 5213079421,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.693174287607687
+    "competition_intensity": 1.693174287607687,
+    "commercial_index": 2
   },
   "응봉동": {
     "low_cost_count": 1,
@@ -3962,7 +4265,8 @@
     "dong_monthly_sales": 348011219,
     "avg_op_days": 5328.071428571428,
     "closure_rate": 85.0,
-    "competition_intensity": 1.8034265103697025
+    "competition_intensity": 1.8034265103697025,
+    "commercial_index": 2
   },
   "응암1동": {
     "low_cost_count": 17,
@@ -3975,7 +4279,8 @@
     "dong_monthly_sales": 1202332075,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.080714725816389
+    "competition_intensity": 3.080714725816389,
+    "commercial_index": 2
   },
   "응암2동": {
     "low_cost_count": 3,
@@ -3988,7 +4293,8 @@
     "dong_monthly_sales": 34477640,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.1822849807445444
+    "competition_intensity": 2.1822849807445444,
+    "commercial_index": 2
   },
   "응암3동": {
     "low_cost_count": 18,
@@ -4001,7 +4307,8 @@
     "dong_monthly_sales": 1047958043,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.915654286706005
+    "competition_intensity": 2.915654286706005,
+    "commercial_index": 2
   },
   "이문1동": {
     "low_cost_count": 19,
@@ -4014,7 +4321,8 @@
     "dong_monthly_sales": 2477341158,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.607809847198642
+    "competition_intensity": 3.607809847198642,
+    "commercial_index": 2
   },
   "이문2동": {
     "low_cost_count": 4,
@@ -4027,7 +4335,8 @@
     "dong_monthly_sales": 415390136,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.1187524990004
+    "competition_intensity": 3.1187524990004,
+    "commercial_index": 2
   },
   "이촌1동": {
     "low_cost_count": 3,
@@ -4040,7 +4349,8 @@
     "dong_monthly_sales": 688489445,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.570943487751637
+    "competition_intensity": 2.570943487751637,
+    "commercial_index": 1
   },
   "이태원1동": {
     "low_cost_count": 8,
@@ -4053,7 +4363,8 @@
     "dong_monthly_sales": 3923936011,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.950354609929078
+    "competition_intensity": 2.950354609929078,
+    "commercial_index": 1
   },
   "이태원2동": {
     "low_cost_count": 1,
@@ -4066,7 +4377,8 @@
     "dong_monthly_sales": 1174315284,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 5.57194362504097
+    "competition_intensity": 5.57194362504097,
+    "commercial_index": 2
   },
   "이화동": {
     "low_cost_count": 12,
@@ -4079,7 +4391,8 @@
     "dong_monthly_sales": 5697720939,
     "avg_op_days": 4295.363636363636,
     "closure_rate": 60.71428571428571,
-    "competition_intensity": 1.4530299617030862
+    "competition_intensity": 1.4530299617030862,
+    "commercial_index": 2
   },
   "인수동": {
     "low_cost_count": 5,
@@ -4092,7 +4405,8 @@
     "dong_monthly_sales": 864422450,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.16769531838025
+    "competition_intensity": 2.16769531838025,
+    "commercial_index": 2
   },
   "인헌동": {
     "low_cost_count": 11,
@@ -4105,7 +4419,8 @@
     "dong_monthly_sales": 1481267420,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.8157997653500195
+    "competition_intensity": 2.8157997653500195,
+    "commercial_index": 2
   },
   "일원1동": {
     "low_cost_count": 4,
@@ -4118,7 +4433,8 @@
     "dong_monthly_sales": 716195241,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.0434972996642826
+    "competition_intensity": 2.0434972996642826,
+    "commercial_index": 2
   },
   "일원2동": {
     "low_cost_count": 4,
@@ -4131,7 +4447,8 @@
     "dong_monthly_sales": 172491271,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 6100.0
+    "competition_intensity": 6100.0,
+    "commercial_index": 2
   },
   "자양1동": {
     "low_cost_count": 8,
@@ -4144,7 +4461,8 @@
     "dong_monthly_sales": 479977822,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.918910554008047
+    "competition_intensity": 1.918910554008047,
+    "commercial_index": 4
   },
   "자양2동": {
     "low_cost_count": 11,
@@ -4157,7 +4475,8 @@
     "dong_monthly_sales": 838830615,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.682403433476395
+    "competition_intensity": 2.682403433476395,
+    "commercial_index": 2
   },
   "자양3동": {
     "low_cost_count": 13,
@@ -4170,7 +4489,8 @@
     "dong_monthly_sales": 4170564183,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.5758663537208335
+    "competition_intensity": 3.5758663537208335,
+    "commercial_index": 2
   },
   "자양4동": {
     "low_cost_count": 9,
@@ -4183,7 +4503,8 @@
     "dong_monthly_sales": 1312963065,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.733364069463654
+    "competition_intensity": 4.733364069463654,
+    "commercial_index": 2
   },
   "잠실2동": {
     "low_cost_count": 6,
@@ -4196,7 +4517,8 @@
     "dong_monthly_sales": 3595475154,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.6044812469556744
+    "competition_intensity": 3.6044812469556744,
+    "commercial_index": 2
   },
   "잠실3동": {
     "low_cost_count": 3,
@@ -4209,7 +4531,8 @@
     "dong_monthly_sales": 2075948596,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 5.179941002949852
+    "competition_intensity": 5.179941002949852,
+    "commercial_index": 2
   },
   "잠실4동": {
     "low_cost_count": 4,
@@ -4222,7 +4545,8 @@
     "dong_monthly_sales": 214327601,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.0204962243797198
+    "competition_intensity": 3.0204962243797198,
+    "commercial_index": 3
   },
   "잠실6동": {
     "low_cost_count": 16,
@@ -4235,7 +4559,8 @@
     "dong_monthly_sales": 13133330861,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.6298929182039054
+    "competition_intensity": 0.6298929182039054,
+    "commercial_index": 2
   },
   "잠실본동": {
     "low_cost_count": 27,
@@ -4248,7 +4573,8 @@
     "dong_monthly_sales": 5546112095,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.860174781523096
+    "competition_intensity": 1.860174781523096,
+    "commercial_index": 4
   },
   "잠원동": {
     "low_cost_count": 11,
@@ -4261,7 +4587,8 @@
     "dong_monthly_sales": 3212410827,
     "avg_op_days": 4228.013029315961,
     "closure_rate": 76.2008733624454,
-    "competition_intensity": 1.7592083562396923
+    "competition_intensity": 1.7592083562396923,
+    "commercial_index": 2
   },
   "장안1동": {
     "low_cost_count": 18,
@@ -4274,7 +4601,8 @@
     "dong_monthly_sales": 1655705618,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.359569107809921
+    "competition_intensity": 1.359569107809921,
+    "commercial_index": 4
   },
   "장안2동": {
     "low_cost_count": 20,
@@ -4287,7 +4615,8 @@
     "dong_monthly_sales": 2478288242,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.5332542573921883
+    "competition_intensity": 2.5332542573921883,
+    "commercial_index": 2
   },
   "장위1동": {
     "low_cost_count": 5,
@@ -4300,7 +4629,8 @@
     "dong_monthly_sales": 279617491,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.122238586156112
+    "competition_intensity": 3.122238586156112,
+    "commercial_index": 4
   },
   "장위2동": {
     "low_cost_count": 5,
@@ -4313,7 +4643,8 @@
     "dong_monthly_sales": 106909794,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.514363885088919
+    "competition_intensity": 4.514363885088919,
+    "commercial_index": 2
   },
   "장위3동": {
     "low_cost_count": 6,
@@ -4326,7 +4657,8 @@
     "dong_monthly_sales": 218973415,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.28884652049571
+    "competition_intensity": 3.28884652049571,
+    "commercial_index": 2
   },
   "장지동": {
     "low_cost_count": 8,
@@ -4339,7 +4671,8 @@
     "dong_monthly_sales": 1179966498,
     "avg_op_days": 3938.6184210526317,
     "closure_rate": 60.68376068376068,
-    "competition_intensity": 1.4036215579127826
+    "competition_intensity": 1.4036215579127826,
+    "commercial_index": 2
   },
   "장충동": {
     "low_cost_count": 3,
@@ -4352,7 +4685,8 @@
     "dong_monthly_sales": 1391689475,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.538828581653346
+    "competition_intensity": 1.538828581653346,
+    "commercial_index": 1
   },
   "전농1동": {
     "low_cost_count": 19,
@@ -4365,7 +4699,8 @@
     "dong_monthly_sales": 971542564,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.454810495626822
+    "competition_intensity": 4.454810495626822,
+    "commercial_index": 4
   },
   "전농2동": {
     "low_cost_count": 4,
@@ -4378,7 +4713,8 @@
     "dong_monthly_sales": 599486130,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.5602322206095791
+    "competition_intensity": 1.5602322206095791,
+    "commercial_index": 2
   },
   "정릉1동": {
     "low_cost_count": 9,
@@ -4391,7 +4727,8 @@
     "dong_monthly_sales": 183703872,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.964959568733154
+    "competition_intensity": 2.964959568733154,
+    "commercial_index": 2
   },
   "정릉2동": {
     "low_cost_count": 6,
@@ -4404,7 +4741,8 @@
     "dong_monthly_sales": 570417388,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.0534458509142053
+    "competition_intensity": 2.0534458509142053,
+    "commercial_index": 2
   },
   "정릉3동": {
     "low_cost_count": 6,
@@ -4417,7 +4755,8 @@
     "dong_monthly_sales": 571632949,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.555821507950077
+    "competition_intensity": 1.555821507950077,
+    "commercial_index": 2
   },
   "정릉4동": {
     "low_cost_count": 6,
@@ -4430,7 +4769,8 @@
     "dong_monthly_sales": 537579883,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.1792763157894735
+    "competition_intensity": 2.1792763157894735,
+    "commercial_index": 2
   },
   "제기동": {
     "low_cost_count": 7,
@@ -4443,7 +4783,8 @@
     "dong_monthly_sales": 502471810,
     "avg_op_days": 5258.73595505618,
     "closure_rate": 75.0,
-    "competition_intensity": 2.2103263685028494
+    "competition_intensity": 2.2103263685028494,
+    "commercial_index": 2
   },
   "조원동": {
     "low_cost_count": 7,
@@ -4456,7 +4797,8 @@
     "dong_monthly_sales": 1006877290,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.9468732706142777
+    "competition_intensity": 2.9468732706142777,
+    "commercial_index": 2
   },
   "종로1234가동": {
     "low_cost_count": 48,
@@ -4469,7 +4811,8 @@
     "dong_monthly_sales": 24220035419,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 153800.0
+    "competition_intensity": 153800.0,
+    "commercial_index": 2
   },
   "종로56가동": {
     "low_cost_count": 19,
@@ -4482,7 +4825,8 @@
     "dong_monthly_sales": 2530942531,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 34900.0
+    "competition_intensity": 34900.0,
+    "commercial_index": 2
   },
   "종암동": {
     "low_cost_count": 10,
@@ -4495,7 +4839,8 @@
     "dong_monthly_sales": 1900823509,
     "avg_op_days": 4332.042016806723,
     "closure_rate": 67.75956284153006,
-    "competition_intensity": 2.001111728738188
+    "competition_intensity": 2.001111728738188,
+    "commercial_index": 2
   },
   "중계1동": {
     "low_cost_count": 10,
@@ -4508,7 +4853,8 @@
     "dong_monthly_sales": 850181106,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.384259259259259
+    "competition_intensity": 2.384259259259259,
+    "commercial_index": 2
   },
   "중계23동": {
     "low_cost_count": 15,
@@ -4521,7 +4867,8 @@
     "dong_monthly_sales": 1649694606,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 17000.0
+    "competition_intensity": 17000.0,
+    "commercial_index": 2
   },
   "중계4동": {
     "low_cost_count": 11,
@@ -4534,7 +4881,8 @@
     "dong_monthly_sales": 1523831708,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.5452109845947755
+    "competition_intensity": 2.5452109845947755,
+    "commercial_index": 4
   },
   "중계본동": {
     "low_cost_count": 10,
@@ -4547,7 +4895,8 @@
     "dong_monthly_sales": 911914400,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.635361763296598
+    "competition_intensity": 2.635361763296598,
+    "commercial_index": 1
   },
   "중곡1동": {
     "low_cost_count": 7,
@@ -4560,7 +4909,8 @@
     "dong_monthly_sales": 343409873,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.0223995090518563
+    "competition_intensity": 3.0223995090518563,
+    "commercial_index": 4
   },
   "중곡2동": {
     "low_cost_count": 10,
@@ -4573,7 +4923,8 @@
     "dong_monthly_sales": 849485067,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.306934871289914
+    "competition_intensity": 2.306934871289914,
+    "commercial_index": 2
   },
   "중곡3동": {
     "low_cost_count": 8,
@@ -4586,7 +4937,8 @@
     "dong_monthly_sales": 1247481006,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.8824107435309534
+    "competition_intensity": 2.8824107435309534,
+    "commercial_index": 2
   },
   "중곡4동": {
     "low_cost_count": 6,
@@ -4599,7 +4951,8 @@
     "dong_monthly_sales": 1401842507,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.3559810582664196
+    "competition_intensity": 3.3559810582664196,
+    "commercial_index": 2
   },
   "중림동": {
     "low_cost_count": 8,
@@ -4612,7 +4965,8 @@
     "dong_monthly_sales": 670742307,
     "avg_op_days": 4036.535714285714,
     "closure_rate": 71.85185185185186,
-    "competition_intensity": 3.2462777642177207
+    "competition_intensity": 3.2462777642177207,
+    "commercial_index": 2
   },
   "중앙동": {
     "low_cost_count": 8,
@@ -4625,7 +4979,8 @@
     "dong_monthly_sales": 1584138098,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.609542356377799
+    "competition_intensity": 2.609542356377799,
+    "commercial_index": 2
   },
   "중화1동": {
     "low_cost_count": 2,
@@ -4638,7 +4993,8 @@
     "dong_monthly_sales": 133765527,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4896265560165975
+    "competition_intensity": 2.4896265560165975,
+    "commercial_index": 4
   },
   "중화2동": {
     "low_cost_count": 10,
@@ -4651,7 +5007,8 @@
     "dong_monthly_sales": 695425482,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.825818406423718
+    "competition_intensity": 2.825818406423718,
+    "commercial_index": 2
   },
   "증산동": {
     "low_cost_count": 6,
@@ -4664,7 +5021,8 @@
     "dong_monthly_sales": 868145871,
     "avg_op_days": 5217.852459016393,
     "closure_rate": 70.51282051282051,
-    "competition_intensity": 1.9465934614424758
+    "competition_intensity": 1.9465934614424758,
+    "commercial_index": 1
   },
   "진관동": {
     "low_cost_count": 19,
@@ -4677,7 +5035,8 @@
     "dong_monthly_sales": 1703192659,
     "avg_op_days": 4315.362573099415,
     "closure_rate": 63.11787072243346,
-    "competition_intensity": 1.8330080847504877
+    "competition_intensity": 1.8330080847504877,
+    "commercial_index": 1
   },
   "창1동": {
     "low_cost_count": 4,
@@ -4690,7 +5049,8 @@
     "dong_monthly_sales": 2145962980,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.843111915223572
+    "competition_intensity": 2.843111915223572,
+    "commercial_index": 4
   },
   "창2동": {
     "low_cost_count": 8,
@@ -4703,7 +5063,8 @@
     "dong_monthly_sales": 299719453,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4211968935587027
+    "competition_intensity": 2.4211968935587027,
+    "commercial_index": 2
   },
   "창3동": {
     "low_cost_count": 4,
@@ -4716,7 +5077,8 @@
     "dong_monthly_sales": 314146876,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.5095320623916813
+    "competition_intensity": 3.5095320623916813,
+    "commercial_index": 2
   },
   "창4동": {
     "low_cost_count": 14,
@@ -4729,7 +5091,8 @@
     "dong_monthly_sales": 1515693466,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.1172641601088118
+    "competition_intensity": 1.1172641601088118,
+    "commercial_index": 2
   },
   "창5동": {
     "low_cost_count": 17,
@@ -4742,7 +5105,8 @@
     "dong_monthly_sales": 1902114313,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.3756398477490484
+    "competition_intensity": 2.3756398477490484,
+    "commercial_index": 2
   },
   "창신1동": {
     "low_cost_count": 6,
@@ -4755,7 +5119,8 @@
     "dong_monthly_sales": 578959038,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.2882792011297157
+    "competition_intensity": 3.2882792011297157,
+    "commercial_index": 2
   },
   "천연동": {
     "low_cost_count": 10,
@@ -4768,7 +5133,8 @@
     "dong_monthly_sales": 246172191,
     "avg_op_days": 4752.25,
     "closure_rate": 69.23076923076923,
-    "competition_intensity": 3.30624824880919
+    "competition_intensity": 3.30624824880919,
+    "commercial_index": 4
   },
   "천호1동": {
     "low_cost_count": 9,
@@ -4781,7 +5147,8 @@
     "dong_monthly_sales": 1281143464,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.857142857142857
+    "competition_intensity": 2.857142857142857,
+    "commercial_index": 4
   },
   "천호2동": {
     "low_cost_count": 27,
@@ -4794,7 +5161,8 @@
     "dong_monthly_sales": 2082810851,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.1459890696651795
+    "competition_intensity": 4.1459890696651795,
+    "commercial_index": 2
   },
   "천호3동": {
     "low_cost_count": 10,
@@ -4807,7 +5175,8 @@
     "dong_monthly_sales": 433857374,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.7773788150807899
+    "competition_intensity": 1.7773788150807899,
+    "commercial_index": 2
   },
   "청구동": {
     "low_cost_count": 2,
@@ -4820,7 +5189,8 @@
     "dong_monthly_sales": 203429560,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.264466352336048
+    "competition_intensity": 1.264466352336048,
+    "commercial_index": 2
   },
   "청담동": {
     "low_cost_count": 13,
@@ -4833,7 +5203,8 @@
     "dong_monthly_sales": 4920390814,
     "avg_op_days": 4209.348557692308,
     "closure_rate": 71.85534591194968,
-    "competition_intensity": 1.561694290976059
+    "competition_intensity": 1.561694290976059,
+    "commercial_index": 2
   },
   "청량리동": {
     "low_cost_count": 5,
@@ -4846,7 +5217,8 @@
     "dong_monthly_sales": 1230460756,
     "avg_op_days": 4688.104838709677,
     "closure_rate": 82.35294117647058,
-    "competition_intensity": 1.9917012448132778
+    "competition_intensity": 1.9917012448132778,
+    "commercial_index": 2
   },
   "청룡동": {
     "low_cost_count": 22,
@@ -4859,7 +5231,8 @@
     "dong_monthly_sales": 1895576581,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.937738642562145
+    "competition_intensity": 2.937738642562145,
+    "commercial_index": 2
   },
   "청림동": {
     "low_cost_count": 1,
@@ -4872,7 +5245,8 @@
     "dong_monthly_sales": 59355758,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.8834951456310676
+    "competition_intensity": 3.8834951456310676,
+    "commercial_index": 2
   },
   "청파동": {
     "low_cost_count": 12,
@@ -4885,7 +5259,8 @@
     "dong_monthly_sales": 3077103140,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.661563886231191
+    "competition_intensity": 2.661563886231191,
+    "commercial_index": 3
   },
   "충현동": {
     "low_cost_count": 9,
@@ -4898,7 +5273,8 @@
     "dong_monthly_sales": 2519059415,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.2546024819309969
+    "competition_intensity": 1.2546024819309969,
+    "commercial_index": 1
   },
   "평창동": {
     "low_cost_count": 3,
@@ -4911,7 +5287,8 @@
     "dong_monthly_sales": 492855606,
     "avg_op_days": 5105.958904109589,
     "closure_rate": 57.692307692307686,
-    "competition_intensity": 3.145386766076421
+    "competition_intensity": 3.145386766076421,
+    "commercial_index": 2
   },
   "풍납2동": {
     "low_cost_count": 3,
@@ -4924,7 +5301,8 @@
     "dong_monthly_sales": 622974498,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 0.9002636486399589
+    "competition_intensity": 0.9002636486399589,
+    "commercial_index": 2
   },
   "필동": {
     "low_cost_count": 21,
@@ -4937,7 +5315,8 @@
     "dong_monthly_sales": 4458293344,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.3389121338912133
+    "competition_intensity": 1.3389121338912133,
+    "commercial_index": 2
   },
   "하계1동": {
     "low_cost_count": 13,
@@ -4950,7 +5329,8 @@
     "dong_monthly_sales": 930057543,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.5800813981326312
+    "competition_intensity": 1.5800813981326312,
+    "commercial_index": 2
   },
   "한강로동": {
     "low_cost_count": 30,
@@ -4963,7 +5343,8 @@
     "dong_monthly_sales": 5028141124,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.2937144497676338
+    "competition_intensity": 1.2937144497676338,
+    "commercial_index": 4
   },
   "한남동": {
     "low_cost_count": 9,
@@ -4976,7 +5357,8 @@
     "dong_monthly_sales": 4014410013,
     "avg_op_days": 3756.801369863014,
     "closure_rate": 67.03786191536749,
-    "competition_intensity": 2.087644272773256
+    "competition_intensity": 2.087644272773256,
+    "commercial_index": 2
   },
   "합정동": {
     "low_cost_count": 9,
@@ -4989,7 +5371,8 @@
     "dong_monthly_sales": 5449639605,
     "avg_op_days": 3917.5051903114186,
     "closure_rate": 74.12008281573499,
-    "competition_intensity": 3.457656238814518
+    "competition_intensity": 3.457656238814518,
+    "commercial_index": 4
   },
   "항동": {
     "low_cost_count": 10,
@@ -5002,7 +5385,8 @@
     "dong_monthly_sales": 44009923,
     "avg_op_days": 4104.5,
     "closure_rate": 29.03225806451613,
-    "competition_intensity": 0.633558144287758
+    "competition_intensity": 0.633558144287758,
+    "commercial_index": 3
   },
   "행당1동": {
     "low_cost_count": 19,
@@ -5015,7 +5399,8 @@
     "dong_monthly_sales": 1200552109,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.1018215787015415
+    "competition_intensity": 2.1018215787015415,
+    "commercial_index": 2
   },
   "행당2동": {
     "low_cost_count": 3,
@@ -5028,7 +5413,8 @@
     "dong_monthly_sales": 143482352,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4786324786324787
+    "competition_intensity": 2.4786324786324787,
+    "commercial_index": 2
   },
   "행운동": {
     "low_cost_count": 9,
@@ -5041,7 +5427,8 @@
     "dong_monthly_sales": 1084679080,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.8519510969686817
+    "competition_intensity": 3.8519510969686817,
+    "commercial_index": 2
   },
   "혜화동": {
     "low_cost_count": 16,
@@ -5054,7 +5441,8 @@
     "dong_monthly_sales": 5236045036,
     "avg_op_days": 4194.658536585366,
     "closure_rate": 67.56756756756756,
-    "competition_intensity": 4.344999458229494
+    "competition_intensity": 4.344999458229494,
+    "commercial_index": 2
   },
   "홍은1동": {
     "low_cost_count": 6,
@@ -5067,7 +5455,8 @@
     "dong_monthly_sales": 624565527,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.0423280423280423
+    "competition_intensity": 3.0423280423280423,
+    "commercial_index": 4
   },
   "홍은2동": {
     "low_cost_count": 7,
@@ -5080,7 +5469,8 @@
     "dong_monthly_sales": 1328863804,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.7293512432123466
+    "competition_intensity": 2.7293512432123466,
+    "commercial_index": 2
   },
   "홍제1동": {
     "low_cost_count": 5,
@@ -5093,7 +5483,8 @@
     "dong_monthly_sales": 446179208,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.3870301528294093
+    "competition_intensity": 3.3870301528294093,
+    "commercial_index": 1
   },
   "홍제2동": {
     "low_cost_count": 6,
@@ -5106,7 +5497,8 @@
     "dong_monthly_sales": 306515623,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.7953110910730388
+    "competition_intensity": 2.7953110910730388,
+    "commercial_index": 2
   },
   "홍제3동": {
     "low_cost_count": 5,
@@ -5119,7 +5511,8 @@
     "dong_monthly_sales": 665275959,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.1581606872157657
+    "competition_intensity": 3.1581606872157657,
+    "commercial_index": 2
   },
   "화곡1동": {
     "low_cost_count": 15,
@@ -5132,7 +5525,8 @@
     "dong_monthly_sales": 3433627526,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.9162112932604733
+    "competition_intensity": 3.9162112932604733,
+    "commercial_index": 4
   },
   "화곡2동": {
     "low_cost_count": 2,
@@ -5145,7 +5539,8 @@
     "dong_monthly_sales": 45661909,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.768670309653916
+    "competition_intensity": 2.768670309653916,
+    "commercial_index": 2
   },
   "화곡3동": {
     "low_cost_count": 8,
@@ -5158,7 +5553,8 @@
     "dong_monthly_sales": 1270717703,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.433001107419712
+    "competition_intensity": 3.433001107419712,
+    "commercial_index": 2
   },
   "화곡4동": {
     "low_cost_count": 9,
@@ -5171,7 +5567,8 @@
     "dong_monthly_sales": 447201045,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 4.544294102629563
+    "competition_intensity": 4.544294102629563,
+    "commercial_index": 2
   },
   "화곡6동": {
     "low_cost_count": 12,
@@ -5184,7 +5581,8 @@
     "dong_monthly_sales": 877402164,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.7932752179327522
+    "competition_intensity": 1.7932752179327522,
+    "commercial_index": 2
   },
   "화곡8동": {
     "low_cost_count": 14,
@@ -5197,7 +5595,8 @@
     "dong_monthly_sales": 1070084335,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.83538633818589
+    "competition_intensity": 3.83538633818589,
+    "commercial_index": 2
   },
   "화곡본동": {
     "low_cost_count": 7,
@@ -5210,7 +5609,8 @@
     "dong_monthly_sales": 1064717109,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 2.4136496046608404
+    "competition_intensity": 2.4136496046608404,
+    "commercial_index": 2
   },
   "화양동": {
     "low_cost_count": 21,
@@ -5223,7 +5623,8 @@
     "dong_monthly_sales": 8435909848,
     "avg_op_days": 3711.633152173913,
     "closure_rate": 73.32155477031802,
-    "competition_intensity": 3.4670084844045657
+    "competition_intensity": 3.4670084844045657,
+    "commercial_index": 2
   },
   "황학동": {
     "low_cost_count": 7,
@@ -5236,7 +5637,8 @@
     "dong_monthly_sales": 863718383,
     "avg_op_days": 5331.66371681416,
     "closure_rate": 71.25748502994011,
-    "competition_intensity": 3.0391264786169248
+    "competition_intensity": 3.0391264786169248,
+    "commercial_index": 2
   },
   "회기동": {
     "low_cost_count": 8,
@@ -5249,7 +5651,8 @@
     "dong_monthly_sales": 4166331747,
     "avg_op_days": 3646.859223300971,
     "closure_rate": 74.67105263157895,
-    "competition_intensity": 2.799491001636066
+    "competition_intensity": 2.799491001636066,
+    "commercial_index": 2
   },
   "회현동": {
     "low_cost_count": 22,
@@ -5262,7 +5665,8 @@
     "dong_monthly_sales": 9161071303,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.5909758330598216
+    "competition_intensity": 1.5909758330598216,
+    "commercial_index": 4
   },
   "효창동": {
     "low_cost_count": 2,
@@ -5275,7 +5679,8 @@
     "dong_monthly_sales": 365425091,
     "avg_op_days": 4006.3783783783783,
     "closure_rate": 67.27272727272727,
-    "competition_intensity": 2.1822358346094948
+    "competition_intensity": 2.1822358346094948,
+    "commercial_index": 4
   },
   "후암동": {
     "low_cost_count": 3,
@@ -5288,7 +5693,8 @@
     "dong_monthly_sales": 1501620708,
     "avg_op_days": 4308.4375,
     "closure_rate": 64.0625,
-    "competition_intensity": 2.46390760346487
+    "competition_intensity": 2.46390760346487,
+    "commercial_index": 2
   },
   "휘경1동": {
     "low_cost_count": 12,
@@ -5301,7 +5707,8 @@
     "dong_monthly_sales": 1010900629,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 3.6052160572743546
+    "competition_intensity": 3.6052160572743546,
+    "commercial_index": 2
   },
   "휘경2동": {
     "low_cost_count": 4,
@@ -5314,7 +5721,8 @@
     "dong_monthly_sales": 194805329,
     "avg_op_days": 0.0,
     "closure_rate": 0.0,
-    "competition_intensity": 1.7519752662315355
+    "competition_intensity": 1.7519752662315355,
+    "commercial_index": 2
   },
   "흑석동": {
     "low_cost_count": 13,
@@ -5327,6 +5735,7 @@
     "dong_monthly_sales": 2682616440,
     "avg_op_days": 3956.969849246231,
     "closure_rate": 76.01476014760148,
-    "competition_intensity": 2.61154476245543
+    "competition_intensity": 2.61154476245543,
+    "commercial_index": 2
   }
 }

@@ -24,8 +24,8 @@ st.set_page_config(
 # 데이터 로드
 # ──────────────────────────────────────────────
 @st.cache_data
-def load_data():
-    """dashboard_data.json 및 p_v2/detailed_analysis.json 로드 (캐시)"""
+def load_data(_cache_key=None):
+    """dashboard_data.json 및 detailed_analysis.json 로드 (캐시)"""
     json_path = os.path.join(os.path.dirname(__file__), "dashboard_data.json")
     with open(json_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -81,6 +81,12 @@ data, df_dong, df_map, df_rec = load_data()
 BRANDS      = data["brands"]
 BRAND_COLORS = data["brand_colors"]
 BRAND_STATS  = data["brand_stats"]
+
+# 브랜드별 평균 매력도 계산 (전역 사용)
+BRAND_ATTR_MAP = {}
+for b in BRANDS:
+    dong_with_brand = df_dong[df_dong[f"cnt_{b}"] > 0]
+    BRAND_ATTR_MAP[b] = dong_with_brand["attractiveness_score"].mean() if not dong_with_brand.empty else 0
 
 # ──────────────────────────────────────────────
 # 테마 및 가이드 설정
@@ -293,7 +299,7 @@ with st.sidebar:
             }[x],
         )
         all_dongs = sorted(df_dong["dong_name"].unique())
-        rec_search = st.selectbox("🏙️ 행정동 선택", ["전체"] + all_dongs)
+        rec_search = st.multiselect("🏙️ 행정동 선택", all_dongs, placeholder="행정동을 선택하세요 (미선택 시 전체)")
 
     elif selected_tab == "🗺️ 지도":
         map_brands = st.multiselect(
@@ -323,6 +329,13 @@ with st.sidebar:
 | ⚔️ **경쟁** | (1 − 정규화_카페수)×100 | 카페 적을수록 ↑ |
 | 💰 **비용** | (1 − 정규화_부동산가)×100 | 임대료 낮을수록 ↑ |
 | ⭐ **매력도** | 수요×0.4 + 경쟁×0.3 + 비용×0.3 | 종합 입지 지수 |
+
+**지표 정의:**
+- **상권 활력도**: 최근 3년간의 **개업률과 폐업률**을 분석하여 4단계로 분류합니다.
+  - **다이나믹**: 개업률↑, 폐업률↑ (상권 교체 활발)
+  - **상권확장**: 개업률↑, 폐업률↓ (성장세)
+  - **정체**: 개업률↓, 폐업률↓ (안정기)
+  - **상권축소**: 개업률↓, 폐업률↑ (쇠퇴기)
         """)
         st.info("💡 **지역 평균 매출 지수 유의사항**: 본 지표는 브랜드가 진출한 행정동 중 **가장 매출이 낮은 지역과 높은 지역의 평균값**을 나타냅니다. (행정동별 전체 카페 평균 기준)")
 
@@ -334,7 +347,7 @@ if selected_tab == "📊 브랜드 개요":
     # 🆕 정렬 기준 선택
     c1, c2 = st.columns([3, 1])
     with c1:
-        st.markdown("#### ⭐ 브랜드 랭킹 상위 10")
+        st.subheader("⭐ 브랜드 랭킹 상위 10", help="서울시 행정동 데이터를 바탕으로 산산된 브랜드별 성과 지표 랭킹입니다.")
     with c2:
         sort_method = st.selectbox(
             "정렬 기준",
@@ -342,15 +355,11 @@ if selected_tab == "📊 브랜드 개요":
             label_visibility="collapsed"
         )
 
-    # 브랜드별 지표 계산
-    brand_attr = {}
-    for b in ACTIVE_BRANDS:
-        dong_with_brand = df_dong[df_dong[f"cnt_{b}"] > 0]
-        brand_attr[b] = dong_with_brand["attractiveness_score"].mean() if not dong_with_brand.empty else 0
+    # 브랜드별 지표 정렬을 위해 전역 BRAND_ATTR_MAP 사용
             
     # 정렬 키 정의
     sort_key_map = {
-        "입지 매력도": lambda b: brand_attr.get(b, 0),
+        "입지 매력도": lambda b: BRAND_ATTR_MAP.get(b, 0),
         "총 매장 수": lambda b: BRAND_STATS[b]["total_stores"],
         "진출 행정동": lambda b: BRAND_STATS[b]["dong_count"],
         "지역 평균 매출": lambda b: BRAND_STATS[b].get("avg_monthly_sales", 0)
@@ -368,9 +377,13 @@ if selected_tab == "📊 브랜드 개요":
         for i, brand in enumerate(row_brands):
             s = BRAND_STATS[brand]
             color = ADJUSTED_BRAND_COLORS[brand]
-            attr_val = brand_attr.get(brand, 0)
+            attr_val = BRAND_ATTR_MAP.get(brand, 0)
             avg = s.get('avg_monthly_sales', 0)
-            avg_str = f"{avg:,}만" if avg else '-'
+            v_min = s.get('min_monthly_sales', 0)
+            v_max = s.get('max_monthly_sales', 0)
+            
+            avg_str = f"{avg:,}" if avg else '-'
+            mm_str = f"{v_max:,}(최대) / {v_min:,}(최소)" if avg else ''
             
             # 현재 정렬 기준 강조 표시
             highlight_style = f"color:{THEME['accent']};font-weight:900" 
@@ -390,7 +403,8 @@ if selected_tab == "📊 브랜드 개요":
                   <hr style="border-color:#30363d;margin:8px 0">
                   <div style="font-size:1.1rem;{highlight_style if sort_method=='지역 평균 매출' else ''}{f';color:{color}' if sort_method!='지역 평균 매출' else ''}">{avg_str}</div>
                   <div class="brand-sub">지역 평균 매출</div>
-                  <div class="brand-sub" style="font-size:0.6rem; margin-top:-4px;">(진출 지역 Min-Max 평균)</div>
+                  <!--<div class="brand-sub" style="font-size:0.6rem; margin-top:2px; font-weight:bold; color:{THEME['accent']}">{mm_str}</div>
+                  <div class="brand-sub" style="font-size:0.6rem; margin-top:-2px;">(진출 지역 Max-Min 평균)</div>-->
                 </div>
                 """, unsafe_allow_html=True)
 
@@ -401,7 +415,7 @@ if selected_tab == "📊 브랜드 개요":
     c1, c2 = st.columns(2)
 
     with c1:
-        st.markdown("##### 브랜드별 총 매장 수")
+        st.subheader("브랜드별 총 매장 수", help="전체 행정동을 합산한 각 브랜드의 현재 누적 매장 수입니다.")
         fig = go.Figure(go.Bar(
             x=ACTIVE_BRANDS,
             y=[BRAND_STATS[b]["total_stores"] for b in ACTIVE_BRANDS],
@@ -415,7 +429,7 @@ if selected_tab == "📊 브랜드 개요":
         st.plotly_chart(fig, use_container_width=True)
 
     with c2:
-        st.markdown("##### 브랜드별 진출 행정동 수")
+        st.subheader("브랜드별 진출 행정동 수", help="서울시 424개 행정동 중 해당 브랜드가 한 점포 이상 진출해 있는 지역의 개수와 비중입니다.")
         fig = go.Figure(go.Pie(
             labels=ACTIVE_BRANDS,
             values=[BRAND_STATS[b]["dong_count"] for b in ACTIVE_BRANDS],
@@ -429,7 +443,7 @@ if selected_tab == "📊 브랜드 개요":
         st.plotly_chart(fig, use_container_width=True)
 
     # 차트 행 2: 상위 30개 동 누적 막대
-    st.markdown("##### 행정동별 브랜드 분포 (총 브랜드 수 상위 30개 동)")
+    st.subheader("행정동별 브랜드 분포 (총 브랜드 수 상위 30개 동)", help="저가 커피 브랜드가 가장 많이 밀집한 상위 30개 행정동의 브랜드별 점유 현황입니다.")
     top30 = df_dong[df_dong["total_brand_count"] > 0].nlargest(30, "total_brand_count")
     fig = go.Figure()
     for brand in ACTIVE_BRANDS:
@@ -601,7 +615,7 @@ elif selected_tab == "🏙️ 행정동 분석":
         row_idx = df_view.index[sel_idx[0]]
         d = df_dong.loc[row_idx]
 
-        st.markdown(f"#### {d['dong_name']}")
+        st.subheader(f"🏙️ {d['dong_name']} 상세 분석", help=f"{d['dong_name']}의 입지 매력도, 인구 통계 및 매출 패턴을 심층 분석합니다.")
 
         m1, m2 = st.columns(2)
         m1.metric("매력도 점수", f"{d['attractiveness_score']:.1f}" if pd.notna(d.get('attractiveness_score')) else "-")
@@ -613,7 +627,7 @@ elif selected_tab == "🏙️ 행정동 분석":
         st.markdown("---")
         st.markdown(f"**근로자** {int(d.get('total_workers',0)):,}명 (여성 {int(d.get('female_workers',0)):,}명)")
         st.markdown(f"**카페 수** {int(d.get('cafe_count',0))}개")
-        st.markdown(f"**지역 평균 매출** {d.get('monthly_sales',0)/1e8:.1f}억원", help="브랜드가 진출한 행정동 중 매출이 가장 낮은 곳과 높은 곳의 평균값입니다. (해당 행정동 내 모든 카페 매장의 평균 월 매출액 기준)")
+        st.markdown(f"**지역 평균 매출** {d.get('monthly_sales',0)/1e8:.2f}억원", help="해당 행정동 내 모든 카페 매장의 평균 월 매출액입니다.")
 
         # 브랜드 현황
         st.markdown("**브랜드별 매장 분포**")
@@ -654,7 +668,7 @@ elif selected_tab == "🏙️ 행정동 분석":
 
         # ── 상세 분석 지표 (Advanced Metrics) ──
         st.markdown("---")
-        st.markdown("#### 📊 상세 분석 지표")
+        st.subheader("📊 상세 분석 지표", help="기회 지수(종사자/매장), 침투율(저가비중), 피크 집중도 등을 종합하여 상권의 세부 특성을 정량화한 지표입니다.")
         
         m1, m2, m3, m4 = st.columns(4)
         with m1:
@@ -686,7 +700,7 @@ elif selected_tab == "🏙️ 행정동 분석":
 
         # ── 점수 계산 방법 설명 ──
         st.markdown("---")
-        st.markdown("#### 📐 가중치 및 평가 지수")
+        st.subheader("📐 가중치 및 평가 지수", help="서울시 전체 데이터를 0~1로 정규화한 후, 각 항목별 가중치(수요 0.4, 경쟁 0.3, 비용 0.3)를 적용하여 산출된 결과입니다.")
         st.caption("서울 행정동별 데이터를 **Min-Max 정규화(0~1)** 한 후 가중 합산한 결과입니다.")
         
         sc1, sc2, sc3, sc4 = st.columns(4)
@@ -764,8 +778,7 @@ elif selected_tab == "🏙️ 행정동 분석":
 # 탭 4: 상세 지표 비교
 # ══════════════════════════════════════════════
 elif selected_tab == "📊 상세 지표 비교":
-    st.markdown("##### 🔍 행정동별 상세 지표 비교 분석")
-    st.caption("기회 지수, 침투율, 매출 집중도 등 고도화된 지표를 바탕으로 지역 및 브랜드의 특성을 분석합니다.")
+    st.subheader("🔍 행정동별 상세 지표 비교 분석", help="기회 지수, 침투율, 매출 집중도 등 고도화된 지표를 바탕으로 지역 및 브랜드의 특성을 분석합니다.")
 
     # 1. 지표별 행정동 랭킹
     st.markdown("---")
@@ -802,11 +815,10 @@ elif selected_tab == "📊 상세 지표 비교":
 
     # 2. 브랜드별 입지 프로필 (Radar Chart)
     st.markdown("---")
-    st.markdown("#### 🧬 브랜드별 입지 전략 프로필 (Radar)")
-    st.caption("선택한 브랜드들이 주로 진출해 있는 지역의 입지적 특성을 레이더 차트로 비교합니다.")
+    st.subheader("🧬 브랜드별 입지 전략 프로필 (Radar)", help="선택한 브랜드들이 주로 진출해 있는 지역의 입지적 특성을 6가지 지표(기회, 침투율, 피크 매출 등)의 서울 전체 대비 상대 강도로 비교합니다.")
     
     # 비교 브랜드 선택 (전역 필터에서 선택된 브랜드 중)
-    compare_brands = st.multiselect("비교할 브랜드 선택 (최대 5개)", ACTIVE_BRANDS, 
+    compare_brands = st.multiselect("비교할 브랜드 선택", ACTIVE_BRANDS, 
                                     default=ACTIVE_BRANDS[:min(3, len(ACTIVE_BRANDS))])
     
     if compare_brands:
@@ -849,8 +861,7 @@ elif selected_tab == "📊 상세 지표 비교":
 
     # 3. 상세 지표 매트릭스 (Heatmap/Table)
     st.markdown("---")
-    st.markdown("#### 📊 브랜드-상세 지표 매트릭스")
-    st.caption("선택한 브랜드들의 핵심 입지 지표 평균값을 수치로 직접 비교합니다.")
+    st.subheader("📊 브랜드-상세 지표 매트릭스", help="선택한 브랜드들의 핵심 입지 지표 평균값을 수치로 직접 비교합니다.")
     
     matrix_data = []
     for b in ACTIVE_BRANDS:
@@ -868,6 +879,97 @@ elif selected_tab == "📊 상세 지표 비교":
         st.dataframe(df_matrix.style.background_gradient(cmap='Blues', axis=0).format("{:.1f}"), use_container_width=True)
     else:
         st.caption("비교 데이터가 부족합니다.")
+
+    # 4. 월평균매출 결측치 시각화 (Matrix Heatmap)
+    st.markdown("---")
+    st.markdown("#### 📊 데이터 정합성: 매출 데이터 현황 매트릭스")
+    st.caption("💡 **매트릭스 확인**: 위 격자는 서울시 전 행정동을 가나다순으로 나열한 것입니다. 초록색 박스는  원본 데이터가 대조된 지역이며, 빨간색은 누락된 지역입니다.")
+
+    # 소스 데이터 로드 및 확인
+    try:
+        src_path = os.path.join(os.path.dirname(__file__), "data", "seoul_dong_attractiveness.csv")
+        df_src = pd.read_csv(src_path, encoding='utf-8-sig')
+        # preprocess.py와 동일한 정규화 적용
+        df_src['행정동코드'] = df_src['행정동_코드'].astype(str).str.split('.').str[0].str.strip().str.ljust(10, '0')
+        src_codes = set(df_src['행정동코드'].tolist())
+    except Exception as e:
+        st.error(f"소스 파일을 로드할 수 없습니다: {e}")
+        src_codes = set()
+
+    # 전체 행정동 매트릭스 데이터 구성 (가나다순 정렬)
+    df_matrix_base = df_dong.sort_values("dong_name").to_dict('records')
+    matrix_items = []
+    for d in df_matrix_base:
+        is_valid = 1 if d['dong_code'] in src_codes else 0
+        matrix_items.append({
+            'name': d['dong_name'],
+            'code': d['dong_code'],
+            'is_valid': is_valid
+        })
+
+    # 열 개수 조정 (가독성을 위해 15열로 변경)
+    cols_n = 15
+    rows_n = (len(matrix_items) + cols_n - 1) // cols_n
+    
+    # 2D 배열 생성 (데이터, 텍스트, 호버)
+    z = []
+    text_labels = []
+    hover = []
+    for r in range(rows_n):
+        row_z, row_text, row_hover = [], [], []
+        for c in range(cols_n):
+            idx = r * cols_n + c
+            if idx < len(matrix_items):
+                item = matrix_items[idx]
+                row_z.append(item['is_valid'])
+                # 이름이 너무 길면 자름 (최대 5자)
+                display_name = item['name'] if len(item['name']) <= 5 else item['name'][:4] + ".."
+                row_text.append(display_name)
+                status = "✅ 데이터 보유" if item['is_valid'] == 1 else "❌ 매출 데이터 결측"
+                row_hover.append(f"{item['name']}<br>{status}")
+            else:
+                row_z.append(-1)
+                row_text.append("")
+                row_hover.append("")
+        z.append(row_z)
+        text_labels.append(row_text)
+        hover.append(row_hover)
+
+    # 히트맵 시각화
+    fig = go.Figure(data=go.Heatmap(
+        z=z,
+        text=text_labels,
+        texttemplate="%{text}",
+        textfont={"size": 9, "family": "Noto Sans KR", "weight": "bold"},
+        hovertext=hover,
+        hoverinfo="text",
+        colorscale=[
+            [0, THEME["bg"]],      # 빈 칸
+            [0.33, THEME["bg"]],
+            [0.33, "#FF6B6B"],    # 결측 (빨강)
+            [0.66, "#FF6B6B"],
+            [0.66, "#4ECDC4"],    # 보유 (초록)
+            [1, "#4ECDC4"]
+        ],
+        showscale=False,
+        xgap=4, ygap=4
+    ))
+
+    fig.update_layout(
+        **PLOT_LAYOUT,
+        height=max(450, rows_n * 22), # 행 수에 맞춰 높이 자동 조절
+        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False, fixedrange=True),
+        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False, autorange='reversed', fixedrange=True),
+    )
+    
+    st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
+    
+    valid_count = len([m for m in matrix_items if m['is_valid'] == 1])
+    total_count = len(matrix_items)
+    missing_items = [m for m in matrix_items if m['is_valid'] == 0]
+    
+    st.metric("데이터 소스 확보율 (Attractiveness CSV)", f"{(valid_count/total_count)*100:.1f}%", f"{valid_count} / {total_count}개동")
+
 
 
 # ══════════════════════════════════════════════
@@ -931,7 +1033,7 @@ elif selected_tab == "📊 입지분석 시각화":
     # 1. Opportunity Score (Brand Breakdown) & 2. 저가카페 점유율 점수
     c1, c2 = st.columns(2)
     with c1:
-        st.markdown("###### 1) Opportunity Score 및 지역별 브랜드 현황")
+        st.subheader("1) Opportunity Score 및 지역 상권 현황", help="🎯 기회 지수 = 총 종사자 수 ÷ 저가 커피 매장 수. 잠재적 커피 수요(근로자)를 공급(저가 매장)이 얼마나 소화하고 있는지를 나타내는 '기회도' 점수입니다.")
         top_opp = df_dong.nlargest(10, 'opportunity_score')
         
         # 브랜드별 데이터로 변환 (Stacked Bar용)
@@ -970,26 +1072,52 @@ elif selected_tab == "📊 입지분석 시각화":
         st.plotly_chart(fig, use_container_width=True)
 
     with c2:
-        st.markdown("###### 2) 저가카페 점유율 점수 분포 (U-Score)")
-        score_counts = df_dong['penetration_score'].value_counts().sort_index()
-        score_map = {1: "1점 (검증부족)", 4: "4점 (최적구간)", 2: "2점 (과밀경쟁)"}
-        score_df = pd.DataFrame({
-            '점수': [score_map.get(i, f"{i}점") for i in score_counts.index],
-            '동 개수': score_counts.values
-        })
-        fig = px.bar(score_df, x='점수', y='동 개수', color='점수',
-                     color_discrete_map={
-                         "1점 (검증부족)": "#FF6B6B", 
-                         "4점 (최적구간)": "#4ECDC4", 
-                         "2점 (과밀경쟁)": "#FFE66D"
-                     }, text_auto=True)
-        fig.update_layout(**PLOT_LAYOUT, height=350, showlegend=False)
-        st.plotly_chart(fig, use_container_width=True)
+        st.subheader("2) 저가 점유율 현황 (전체 vs 저가)", help="📈 저가 브랜드 점유율 분포: X축(전체 카페 수) 대비 Y축(저가 카페 수)의 상관관계를 보여줍니다. 점의 크기는 저가 비중(%)을 나타내며, 색상은 성숙도 점수(1, 4, 2)를 의미합니다.")
+        
+        try:
+            data_dir = os.path.join(os.path.dirname(__file__), "data")
+            csv_path = os.path.join(data_dir, "dong_lowcost_cafe_ratio.csv")
+            
+            
+            try:
+                df_u = pd.read_csv(csv_path, encoding='utf-8-sig')
+            except:
+                df_u = pd.read_csv(csv_path, encoding='cp949')
+            
+            df_u['penetration_rate'] = (df_u['저가카페_매장수'] / df_u['전체_카페수']) * 100
+            
+            def get_u_label(rate):
+                if rate <= 3: return "1점 (검증부족)"
+                elif rate <= 15: return "4점 (최적구간)"
+                else: return "2점 (과밀경쟁)"
+                
+            df_u['상태'] = df_u['penetration_rate'].apply(get_u_label)
+            
+            fig = px.scatter(df_u, 
+                           x='전체_카페수', 
+                           y='저가카페_매장수',
+                           size='penetration_rate',
+                           color='상태',
+                           hover_name='행정동명',
+                           color_discrete_map={
+                               "1점 (검증부족)": "#FF6B6B", 
+                               "4점 (최적구간)": "#4ECDC4", 
+                               "2점 (과밀경쟁)": "#FFE66D"
+                           },
+                           labels={'전체_카페수': '전체 카페 수', '저가카페_매장수': '저가 카페 수', 'penetration_rate': '저가 비율(%)'},
+                           opacity=0.7)
+            
+            fig.update_layout(**PLOT_LAYOUT, height=350, showlegend=True, 
+                             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1))
+            st.plotly_chart(fig, use_container_width=True)
+            
+        except Exception as e:
+            st.error(f"U-Score 데이터를 로드할 수 없습니다: {e}")
 
     # 3. 피크 시간 & 4. 주중 매출 (브랜드 비교 요소 추가)
     c3, c4 = st.columns(2)
     with c3:
-        st.markdown("###### 3) 오피스 상권 집중도 (피크 시간 매출)")
+        st.subheader("3) 오피스 상권 집중도 (피크 시간 매출)", help="⏰ 피크 시간 매출 비중 = (06~14시 매출 ÷ 총 매출) × 100. 출근 및 점심 시간대의 매출 쏠림 정도를 통해 직장인 중심 상권인지를 판별합니다.")
         top_peak = df_dong.nlargest(10, 'peak_sales_ratio')
         fig = px.bar(top_peak, x='dong_name', y='peak_sales_ratio',
                      color='peak_sales_ratio', color_continuous_scale='Oranges',
@@ -998,7 +1126,7 @@ elif selected_tab == "📊 입지분석 시각화":
         st.plotly_chart(fig, use_container_width=True)
 
     with c4:
-        st.markdown("###### 4) 평일 상권 집중도 (주중 매출 비중)")
+        st.subheader("4) 평일 상권 집중도 (주중 매출 비중)", help="📅 주중 매출 비중 = (월~금 매출 ÷ 전체 매출) × 100. 주말 대비 평일 매출이 얼마나 활발한지를 통해 오피스 밀집 지역인지 주거 지역인지 구분합니다.")
         top_weekday = df_dong.nlargest(10, 'weekday_sales_ratio')
         fig = px.bar(top_weekday, x='dong_name', y='weekday_sales_ratio',
                      color='weekday_sales_ratio', color_continuous_scale='Blues',
@@ -1009,7 +1137,7 @@ elif selected_tab == "📊 입지분석 시각화":
     # 5. 경쟁 강도 & 6. 상권변화 (브랜드 비교 파이 차트)
     c5, c6 = st.columns(2)
     with c5:
-        st.markdown("###### 5) 브랜드별 지역 점유율 비교 (전체)")
+        st.subheader("5) 브랜드별 지역 점유율 비교 (전체)", help="서울시 전체 행정동에 걸친 각 브랜드의 총 매장 수 리스트입니다. 저가 커피 시장 내 각 브랜드의 시장 지배력을 한눈에 비교할 수 있습니다.")
         total_counts = {b: df_dong[f"cnt_{b}"].sum() for b in ACTIVE_BRANDS}
         share_df = pd.DataFrame({
             '브랜드': list(total_counts.keys()),
@@ -1022,28 +1150,52 @@ elif selected_tab == "📊 입지분석 시각화":
         st.plotly_chart(fig, use_container_width=True)
 
     with c6:
-        st.markdown("###### 6) 상권변화 및 활력도 분포")
-        change_map = {4: "다이나믹(4)", 3: "상권확장(3)", 2: "정체(2)", 1: "상권축소(1)"}
-        change_counts = df_dong['commercial_index'].value_counts().sort_index(ascending=False)
-        change_df = pd.DataFrame({
-            '지표': [change_map.get(i, f"{i}") for i in change_counts.index],
-            '동 개수': change_counts.values
-        })
-        fig = px.pie(change_df, values='동 개수', names='지표', hole=0.4,
-                     color='지표', color_discrete_map={
-                         "다이나믹(4)": "#4ECDC4", 
-                         "상권확장(3)": "#58a6ff", 
-                         "정체(2)": "#FFE66D", 
-                         "상권축소(1)": "#FF6B6B"
-                     })
-        fig.update_layout(**PLOT_LAYOUT, height=350)
-        st.plotly_chart(fig, use_container_width=True)
+        st.subheader("6) 브랜드별 입지 상권 활력도 분포", help="🔄 상권 활력도 비중: 각 브랜드의 전체 매장들이 어떤 성격의 상권(다이나믹/확장/정체/축소)에 위치해 있는지 100% 비중으로 보여줍니다. 브랜드별 입지 전략의 공격성 및 안정성을 비교할 수 있습니다.")
+        
+        # detailed_analysis.json에서 사전 계산된 commercial_index 사용
+        ci_col = df_dong['commercial_index'].astype(int)
+        
+        # 브랜드별 활력도 분포 데이터 생성
+        vitality_dist = []
+        change_labels = {4: "다이나믹(4, best)", 3: "상권확장(3)", 2: "정체(2)", 1: "상권축소(1, worst)"}
+        
+        for b in ACTIVE_BRANDS:
+            for idx, label in change_labels.items():
+                store_count = df_dong[ci_col == idx][f"cnt_{b}"].sum()
+                if store_count > 0:
+                    vitality_dist.append({
+                        "브랜드": b,
+                        "활력도": label,
+                        "매장수": int(store_count)
+                    })
+        
+        if vitality_dist:
+            df_v = pd.DataFrame(vitality_dist)
+            fig = px.bar(df_v, 
+                         x="브랜드", 
+                         y="매장수", 
+                         color="활력도",
+                         color_discrete_map={
+                             "다이나믹(4, best)": "#4ECDC4", 
+                             "상권확장(3)": "#58a6ff", 
+                             "정체(2)": "#FFE66D", 
+                             "상권축소(1, worst)": "#FF6B6B"
+                         },
+                         category_orders={"활력도": [change_labels[4], change_labels[3], change_labels[2], change_labels[1]]})
+            
+            fig.update_layout(**PLOT_LAYOUT, height=350, showlegend=True, barnorm="percent",
+                             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1))
+            fig.update_yaxes(title="비중 (%)")
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.info("표시할 상권 활력도 데이터가 없습니다.")
+
 
     # ──────────────────────────────────────────────
     # 📊 심층 통계 분석 (기존 차트 보강)
     # ──────────────────────────────────────────────
     st.markdown("---")
-    st.markdown("##### 🔬 다차원 분포 및 밀도 분석")
+    st.subheader("🔬 다차원 분포 및 밀도 분석", help="주요 지표(매력도, 매출, 종사자 등) 간의 상관관계와 분포 밀도를 심층 분석하여 일반적인 경향성에서 벗어난 특이 지역을 포착합니다.")
     
     c7, c8 = st.columns(2)
     with c7:
@@ -1088,64 +1240,92 @@ elif selected_tab == "⭐ 입지 추천":
     df_r = df_rec.copy()
     if rec_brand != "전체":
         df_r = df_r[df_r["brand"] == rec_brand]
-    if rec_search != "전체":
-        df_r = df_r[df_r["dong_name"].str.contains(rec_search)]
-    df_r = df_r.sort_values(rec_sort, ascending=False).head(60)
+    if rec_search:
+        df_r = df_r[df_r["dong_name"].isin(rec_search)]
+    # 행정동 그룹화를 위해 충분한 데이터 확보 (동별 중복 브랜드 고려)
+    df_r = df_r.sort_values(rec_sort, ascending=False).head(1000)
 
-    st.markdown(f"##### ⭐ 입지 추천 — {len(df_r)}개 결과")
-    st.caption("매력도 점수 기준 해당 브랜드가 **아직 진출하지 않은** 행정동을 추천합니다.")
+    st.subheader(f"##### ⭐ 입지 추천 — {df_r['dong_name'].nunique()}개 행정동", help="매력도 점수(수요, 경쟁, 비용)를 기준으로 브랜드가 진출하기에 가장 적합한 미진출 행정동을 추천합니다.")
 
     if df_r.empty:
         st.warning("조건에 맞는 추천 결과가 없습니다.")
     else:
+        # 동네별 그룹화 (정렬 순서 유지)
+        unique_dongs = df_r["dong_name"].unique()
+        grouped_recs = []
+        for dong in unique_dongs:
+            if len(grouped_recs) >= 30: # 최종 표시 지역 수를 30개로 제한
+                break
+            dong_group = df_r[df_r["dong_name"] == dong]
+            
+            # 브랜드별 상세 정보 구성 (브랜드 개요 기준 매력도 점수 적용)
+            b_list = dong_group["brand"].tolist()
+            b_details = sorted(
+                [{"name": b, "score": BRAND_ATTR_MAP.get(b, 0)} for b in b_list],
+                key=lambda x: x["score"],
+                reverse=True
+            )
+
+            grouped_recs.append({
+                "dong_name": dong,
+                "data": dong_group.iloc[0], # 공통 수치 (수요, 경쟁 등)
+                "brands": [x["name"] for x in b_details],
+                "scores": [x["score"] for x in b_details]
+            })
+
         # 3열 카드 그리드
-        for row_start in range(0, len(df_r), 3):
+        for i in range(0, len(grouped_recs), 3):
             cols = st.columns(3)
-            for ci, idx in enumerate(range(row_start, min(row_start + 3, len(df_r)))):
-                r = df_r.iloc[idx]
-                color = BRAND_COLORS.get(r["brand"], "#888")
+            for ci, g_idx in enumerate(range(i, min(i + 3, len(grouped_recs)))):
+                g = grouped_recs[g_idx]
+                r = g["data"]
                 score = r.get("attractiveness_score")
                 score_color = "#4ECDC4" if score and score > 60 else "#FFE66D" if score and score > 40 else "#FF6B6B"
+
+                # 브랜드 리스트 HTML 생성
+                brand_chips_html = ""
+                for b, s in zip(g["brands"], g["scores"]):
+                    b_color = BRAND_COLORS.get(b, "#888")
+                    adj_color = ADJUSTED_BRAND_COLORS.get(b, b_color)
+                    brand_chips_html += f"""
+                    <div style="display:flex; justify-content:space-between; align-items:center; 
+                               background:{b_color}10; border:1px solid {b_color}30; border-radius:6px; 
+                               padding:4px 8px; margin-bottom:4px;">
+                        <span style="color:{adj_color}; font-size:0.85rem; font-weight:800;">{b}</span>
+                        <span style="color:{THEME['text_sub']}; font-size:0.75rem; font-weight:600;">{s:.1f}점</span>
+                    </div>
+                    """
 
                 with cols[ci]:
                     st.markdown(f"""
                     <div style="background:{THEME['surface']};border:1px solid {THEME['border']};border-radius:12px;
-                         padding:18px;border-top:4px solid {color};margin-bottom:14px;box-shadow: 0 4px 10px {THEME['shadow']}">
-                      <div style="font-size:.75rem;color:{THEME['text_sub']};font-weight:700">#{row_start+ci+1} 추천</div>
-                      <div style="font-size:1.1rem;font-weight:800;margin:6px 0;color:{THEME['text']}">{r['dong_name']}</div>
-                      <span style="background:{color}15;color:{ADJUSTED_BRAND_COLORS.get(r['brand'], color)};padding:3px 10px;
-                            border-radius:12px;font-size:.78rem;font-weight:800;border:1px solid {color}30">{r['brand']}</span>
-                      <span style="font-size:.75rem;color:{THEME['text_sub']};margin-left:8px;font-weight:600">미진출 지역</span>
+                         padding:18px;border-top:4px solid {THEME['accent']};margin-bottom:14px;box-shadow: 0 4px 10px {THEME['shadow']}">
+                      <div style="font-size:.75rem;color:{THEME['text_sub']};font-weight:700">#{g_idx+1} 타겟 행정동</div>
+                      <div style="font-size:1.2rem;font-weight:800;margin:6px 0;color:{THEME['text']}">{g['dong_name']}</div>
+                      
+                      <div style="margin:12px 0;">
+                        <div style="font-size:.7rem; color:{THEME['text_sub']}; font-weight:700; margin-bottom:6px;">추천 브랜드 (매력도순)</div>
+                        {brand_chips_html}
+                      </div>
+
                       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px">
                         <div style="background:{THEME['surface2']};border-radius:8px;padding:10px;border:1px solid {THEME['border']}">
-                          <div style="font-size:.68rem;color:{THEME['text_sub']};font-weight:700">매력도</div>
+                          <div style="font-size:.68rem;color:{THEME['text_sub']};font-weight:700">대표 매력도</div>
                           <div style="font-size:1.2rem;font-weight:900;color:{score_color}">
                             {f"{score:.1f}" if score else "-"}
                           </div>
                         </div>
                         <div style="background:{THEME['surface2']};border-radius:8px;padding:10px;border:1px solid {THEME['border']}">
-                          <div style="font-size:.68rem;color:{THEME['text_sub']};font-weight:700">수요</div>
+                          <div style="font-size:.68rem;color:{THEME['text_sub']};font-weight:700">수요 지수</div>
                           <div style="font-size:1.2rem;font-weight:900;color:#00897b">
                             {f"{r['demand_score']:.1f}" if r.get('demand_score') else "-"}
-                          </div>
-                        </div>
-                        <div style="background:{THEME['surface2']};border-radius:8px;padding:10px;border:1px solid {THEME['border']}">
-                          <div style="font-size:.68rem;color:{THEME['text_sub']};font-weight:700">경쟁</div>
-                          <div style="font-size:1.2rem;font-weight:900;color:#f57f17">
-                            {f"{r['competition_score']:.1f}" if r.get('competition_score') else "-"}
-                          </div>
-                        </div>
-                        <div style="background:{THEME['surface2']};border-radius:8px;padding:10px;border:1px solid {THEME['border']}">
-                          <div style="font-size:.68rem;color:{THEME['text_sub']};font-weight:700">비용</div>
-                          <div style="font-size:1.2rem;font-weight:900;color:#2e7d32">
-                            {f"{r['cost_score']:.1f}" if r.get('cost_score') else "-"}
                           </div>
                         </div>
                       </div>
                       <div style="font-size:.8rem;color:{THEME['text']};margin-top:12px;font-weight:700;border-top:1px solid {THEME['border']};padding-top:8px">
                         근로자 {int(r.get('total_workers',0)):,}명 · 
                         카페 {int(r.get('cafe_count',0))}개 <br>
-                        지역 평균 매출 <span style="color:#005cc5">{r.get('monthly_sales',0)/1e8:.1f}억 원</span>
+                        지역 평균 매출 <span style="color:#005cc5">{r.get('monthly_sales',0)/1e8:.2f}억 원</span>
                       </div>
                     </div>
                     """, unsafe_allow_html=True)
