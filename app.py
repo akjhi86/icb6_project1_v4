@@ -258,7 +258,7 @@ with st.sidebar:
     st.divider()
     selected_tab = st.radio(
         "분석 메뉴",
-        ["📊 브랜드 개요", "🗺️ 지도", "🏙️ 행정동 분석", "📊 상세 지표 비교", "📊 분석 시각화", "⭐ 입지 추천"],
+        ["📊 브랜드 개요", "🗺️ 지도", "🏙️ 행정동 분석", "📊 상세 지표 비교", "📊 입지분석 시각화", "⭐ 입지 추천"],
         label_visibility="collapsed",
     )
     st.divider()
@@ -269,11 +269,11 @@ with st.sidebar:
         brand_filter = st.selectbox("브랜드 필터", ["전체"] + ACTIVE_BRANDS)
         sort_by = st.selectbox(
             "정렬 기준",
-            ["total_brand_count", "attractiveness_score", "monthly_sales", "opportunity_score", "penetration_rate", "peak_sales_ratio", "closure_rate"],
+                        ["total_brand_count", "attractiveness_score", "monthly_sales", "opportunity_score", "penetration_rate", "peak_sales_ratio", "closure_rate"],
             format_func=lambda x: {
                 "total_brand_count": "총 브랜드 수",
                 "attractiveness_score": "매력도 점수",
-                "monthly_sales": "월 매출",
+                "monthly_sales": "지역 평균 매출",
                 "opportunity_score": "기회 지수 (종사자/저가카페)",
                 "penetration_rate": "저가 브랜드 침투율",
                 "peak_sales_ratio": "피크 시간 매출 비중",
@@ -319,11 +319,12 @@ with st.sidebar:
 
 | 점수 | 공식 | 의미 |
 |---|---|---|
-| 📈 **수요** | (정규화_매출×0.5 + 정규화_종사자×0.5)×100 | 높을수록 ↑ |
+| 📈 **수요** | (정규화_지역매출×0.5 + 정규화_종사자×0.5)×100 | 높을수록 ↑ |
 | ⚔️ **경쟁** | (1 − 정규화_카페수)×100 | 카페 적을수록 ↑ |
 | 💰 **비용** | (1 − 정규화_부동산가)×100 | 임대료 낮을수록 ↑ |
 | ⭐ **매력도** | 수요×0.4 + 경쟁×0.3 + 비용×0.3 | 종합 입지 지수 |
         """)
+        st.info("💡 **지역 평균 매출 지수 유의사항**: 본 지표는 브랜드가 진출한 행정동 중 **가장 매출이 낮은 지역과 높은 지역의 평균값**을 나타냅니다. (행정동별 전체 카페 평균 기준)")
 
 # ══════════════════════════════════════════════
 # 탭 1: 브랜드 개요
@@ -337,7 +338,7 @@ if selected_tab == "📊 브랜드 개요":
     with c2:
         sort_method = st.selectbox(
             "정렬 기준",
-            ["입지 매력도", "총 매장 수", "진출 행정동", "평균 월매출"],
+            ["입지 매력도", "총 매장 수", "진출 행정동", "지역 평균 매출"],
             label_visibility="collapsed"
         )
 
@@ -352,7 +353,7 @@ if selected_tab == "📊 브랜드 개요":
         "입지 매력도": lambda b: brand_attr.get(b, 0),
         "총 매장 수": lambda b: BRAND_STATS[b]["total_stores"],
         "진출 행정동": lambda b: BRAND_STATS[b]["dong_count"],
-        "평균 월매출": lambda b: BRAND_STATS[b].get("avg_monthly_sales", 0)
+        "지역 평균 매출": lambda b: BRAND_STATS[b].get("avg_monthly_sales", 0)
     }
     
     # 선택된 기준에 따라 정렬 후 상위 10개 선택
@@ -387,8 +388,9 @@ if selected_tab == "📊 브랜드 개요":
                   <div style="font-size:1.1rem;{highlight_style if sort_method=='진출 행정동' else ''}">{s['dong_count']}</div>
                   <div class="brand-sub">진출 행정동</div>
                   <hr style="border-color:#30363d;margin:8px 0">
-                  <div style="font-size:1.1rem;{highlight_style if sort_method=='평균 월매출' else ''}{f';color:{color}' if sort_method!='평균 월매출' else ''}">{avg_str}</div>
-                  <div class="brand-sub">평균 월매출</div>
+                  <div style="font-size:1.1rem;{highlight_style if sort_method=='지역 평균 매출' else ''}{f';color:{color}' if sort_method!='지역 평균 매출' else ''}">{avg_str}</div>
+                  <div class="brand-sub">지역 평균 매출</div>
+                  <div class="brand-sub" style="font-size:0.6rem; margin-top:-4px;">(진출 지역 Min-Max 평균)</div>
                 </div>
                 """, unsafe_allow_html=True)
 
@@ -579,7 +581,8 @@ elif selected_tab == "🏙️ 행정동 분석":
 
     show_df = df_view[display_cols].rename(columns=rename_map).head(200).copy()
     if "월매출(억)" in show_df.columns:
-        show_df["월매출(억)"] = (show_df["월매출(억)"] / 1e8).round(1)
+        show_df.rename(columns={"월매출(억)": "지역평균매출(억)"}, inplace=True)
+        show_df["지역평균매출(억)"] = (show_df["지역평균매출(억)"] / 1e8).round(1)
     if "매력도" in show_df.columns:
         show_df["매력도"] = show_df["매력도"].round(1)
 
@@ -610,7 +613,7 @@ elif selected_tab == "🏙️ 행정동 분석":
         st.markdown("---")
         st.markdown(f"**근로자** {int(d.get('total_workers',0)):,}명 (여성 {int(d.get('female_workers',0)):,}명)")
         st.markdown(f"**카페 수** {int(d.get('cafe_count',0))}개")
-        st.markdown(f"**월 매출** {d.get('monthly_sales',0)/1e8:.1f}억원")
+        st.markdown(f"**지역 평균 매출** {d.get('monthly_sales',0)/1e8:.1f}억원", help="브랜드가 진출한 행정동 중 매출이 가장 낮은 곳과 높은 곳의 평균값입니다. (해당 행정동 내 모든 카페 매장의 평균 월 매출액 기준)")
 
         # 브랜드 현황
         st.markdown("**브랜드별 매장 분포**")
@@ -868,8 +871,9 @@ elif selected_tab == "📊 상세 지표 비교":
 
 
 # ══════════════════════════════════════════════
-# 탭 5: 분석 시각화
+# 탭 5: 입지분석 시각화
 # ══════════════════════════════════════════════
+elif selected_tab == "📊 입지분석 시각화":
     st.markdown("##### 📊 데이터 기반 심층 분석 시각화")
     st.caption("서울시 행정동별 핵심 지표를 6가지 관점에서 분석하며, 각 브랜드별 현황을 비교합니다.")
 
@@ -1045,8 +1049,8 @@ elif selected_tab == "📊 상세 지표 비교":
     with c7:
         st.markdown("###### 주요 지표 분포 (Box Plot)")
         box_df = df_dong.copy()
-        box_df['월 매출(억)'] = box_df['monthly_sales'] / 1e8
-        melt_df = box_df.melt(value_vars=['attractiveness_score', 'opportunity_score', '월 매출(억)'], 
+        box_df['지역 평균 매출(억)'] = box_df['monthly_sales'] / 1e8
+        melt_df = box_df.melt(value_vars=['attractiveness_score', 'opportunity_score', '지역 평균 매출(억)'], 
                               var_name='지표', value_name='값')
         fig = px.box(melt_df, x='지표', y='값', color='지표', points="all")
         fig.update_layout(**PLOT_LAYOUT, height=380, showlegend=False)
@@ -1058,7 +1062,7 @@ elif selected_tab == "📊 상세 지표 비교":
         dens_df['sales_cr'] = dens_df['monthly_sales'] / 1e8
         fig = px.density_heatmap(dens_df, x='total_workers', y='sales_cr', 
                                  nbinsx=30, nbinsy=30, color_continuous_scale='Viridis',
-                                 labels={'total_workers': '총 종사자 수', 'sales_cr': '월 매출(억)'},
+                                 labels={'total_workers': '총 종사자 수', 'sales_cr': '지역 평균 매출(억)'},
                                  text_auto=True)
         fig.update_layout(**PLOT_LAYOUT, height=380, coloraxis_showscale=True)
         st.plotly_chart(fig, use_container_width=True)
@@ -1069,7 +1073,7 @@ elif selected_tab == "📊 상세 지표 비교":
     fig = px.scatter(scat_df, x='cafe_count', y='sales_cr', 
                      marginal_x="box", marginal_y="violin",
                      hover_name='dong_name', color='attractiveness_score',
-                     labels={'cafe_count': '행정동별 전체 카페 수', 'sales_cr': '월 매출(억)'},
+                     labels={'cafe_count': '행정동별 전체 카페 수', 'sales_cr': '지역 평균 매출(억)'},
                      opacity=0.7)
     fig.update_layout(**PLOT_LAYOUT, height=450)
     st.plotly_chart(fig, use_container_width=True)
@@ -1141,7 +1145,7 @@ elif selected_tab == "⭐ 입지 추천":
                       <div style="font-size:.8rem;color:{THEME['text']};margin-top:12px;font-weight:700;border-top:1px solid {THEME['border']};padding-top:8px">
                         근로자 {int(r.get('total_workers',0)):,}명 · 
                         카페 {int(r.get('cafe_count',0))}개 <br>
-                        월평균 매출 <span style="color:#005cc5">{r.get('monthly_sales',0)/1e8:.1f}억 원</span>
+                        지역 평균 매출 <span style="color:#005cc5">{r.get('monthly_sales',0)/1e8:.1f}억 원</span>
                       </div>
                     </div>
                     """, unsafe_allow_html=True)
