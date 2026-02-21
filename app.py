@@ -1075,9 +1075,19 @@ elif selected_tab == "📊 입지분석 시각화":
         st.subheader("2) 저가 점유율 현황 (전체 vs 저가)", help="📈 저가 브랜드 점유율 분포: X축(전체 카페 수) 대비 Y축(저가 카페 수)의 상관관계를 보여줍니다. 점의 크기는 저가 비중(%)을 나타내며, 색상은 성숙도 점수(1, 4, 2)를 의미합니다.")
         
         try:
-            data_dir = os.path.join(os.path.dirname(__file__), "data")
-            csv_path = os.path.join(data_dir, "dong_lowcost_cafe_ratio.csv")
-            
+            # 여러 경로 후보에서 파일 탐색 (로컬 / Streamlit Cloud 대응)
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            candidates = [
+                os.path.join(base_dir, "data", "dong_lowcost_cafe_ratio.csv"),
+                os.path.join(base_dir, "dong_lowcost_cafe_ratio.csv"),
+            ]
+            csv_path = None
+            for c in candidates:
+                if os.path.isfile(c):
+                    csv_path = c
+                    break
+            if csv_path is None:
+                raise FileNotFoundError("dong_lowcost_cafe_ratio.csv 파일을 찾을 수 없습니다.")
             
             try:
                 df_u = pd.read_csv(csv_path, encoding='utf-8-sig')
