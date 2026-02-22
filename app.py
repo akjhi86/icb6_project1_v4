@@ -887,7 +887,14 @@ elif selected_tab == "📊 상세 지표 비교":
 
     # 소스 데이터 로드 및 확인
     try:
-        src_path = os.path.join(os.path.dirname(__file__), "data", "seoul_dong_attractiveness.csv")
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        for _p in [os.path.join(base_dir, "data", "seoul_dong_attractiveness.csv"),
+                   os.path.join(base_dir, "seoul_dong_attractiveness.csv")]:
+            if os.path.isfile(_p):
+                src_path = _p
+                break
+        else:
+            raise FileNotFoundError("seoul_dong_attractiveness.csv 파일을 찾을 수 없습니다.")
         df_src = pd.read_csv(src_path, encoding='utf-8-sig')
         # preprocess.py와 동일한 정규화 적용
         df_src['행정동코드'] = df_src['행정동_코드'].astype(str).str.split('.').str[0].str.strip().str.ljust(10, '0')
@@ -1200,8 +1207,44 @@ elif selected_tab == "📊 입지분석 시각화":
         else:
             st.info("표시할 상권 활력도 데이터가 없습니다.")
 
+    # 7. 경쟁 강도 (카페 수 ÷ 종사자 수)
+    st.markdown("---")
+    st.subheader("7) 경쟁 강도 — 종사자 대비 카페 밀집도", help="⚔️ 경쟁 강도 = 행정동 내 카페 수 ÷ 종사자 수. 종사자 대비 카페 수가 많을수록 경쟁이 치열합니다. 값이 낮을수록 상대적으로 유리한 입지입니다.")
+    
+    # 종사자 수가 0인 행정동 제외
+    df_comp = df_dong[df_dong['total_workers'] > 0].copy()
+    df_comp['competition_ratio'] = df_comp['cafe_count'] / df_comp['total_workers']
+    
+    c7a, c7b = st.columns(2)
+    
+    with c7a:
+        # 경쟁 강도 상위 15 (경쟁 치열)
+        top_comp = df_comp.nlargest(15, 'competition_ratio')
+        fig = px.bar(top_comp, y='dong_name', x='competition_ratio',
+                     orientation='h',
+                     color='competition_ratio',
+                     color_continuous_scale='Reds',
+                     text=top_comp['competition_ratio'].apply(lambda x: f"{x:.4f}"),
+                     labels={'competition_ratio': '경쟁 강도', 'dong_name': '행정동'})
+        fig.update_layout(**PLOT_LAYOUT, height=400, showlegend=False, coloraxis_showscale=False,
+                         title=dict(text="🔴 경쟁 치열 상위 15", font=dict(size=14)))
+        fig.update_yaxes(autorange="reversed")
+        st.plotly_chart(fig, use_container_width=True)
+    
+    with c7b:
+        # 경쟁 강도 하위 15 (진출 유리)
+        bottom_comp = df_comp[df_comp['competition_ratio'] > 0].nsmallest(15, 'competition_ratio')
+        fig = px.bar(bottom_comp, y='dong_name', x='competition_ratio',
+                     orientation='h',
+                     color='competition_ratio',
+                     color_continuous_scale='Greens_r',
+                     text=bottom_comp['competition_ratio'].apply(lambda x: f"{x:.4f}"),
+                     labels={'competition_ratio': '경쟁 강도', 'dong_name': '행정동'})
+        fig.update_layout(**PLOT_LAYOUT, height=400, showlegend=False, coloraxis_showscale=False,
+                         title=dict(text="🟢 진출 유리 상위 15", font=dict(size=14)))
+        fig.update_yaxes(autorange="reversed")
+        st.plotly_chart(fig, use_container_width=True)
 
-    # ──────────────────────────────────────────────
     # 📊 심층 통계 분석 (기존 차트 보강)
     # ──────────────────────────────────────────────
     st.markdown("---")
