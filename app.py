@@ -600,178 +600,79 @@ elif selected_tab == "🏙️ 행정동 분석":
     if "매력도" in show_df.columns:
         show_df["매력도"] = show_df["매력도"].round(1)
 
-    # 테이블 표시 (1단)
+    # 테이블 표시 (다중 선택 가능)
     selected_rows = st.dataframe(
         show_df,
         use_container_width=True,
         height=400,
         on_select="rerun",
-        selection_mode="single-row",
+        selection_mode="multi-row",
     )
 
-    # 선택 행 상세 (아래에 표시)
+    # 선택된 행정동들 가로 비교
     sel_idx = selected_rows.selection.get("rows", []) if selected_rows else []
     if sel_idx:
-        row_idx = df_view.index[sel_idx[0]]
-        d = df_dong.loc[row_idx]
-
-        st.subheader(f"🏙️ {d['dong_name']} 상세 분석", help=f"{d['dong_name']}의 입지 매력도, 인구 통계 및 매출 패턴을 심층 분석합니다.")
-
-        m1, m2 = st.columns(2)
-        m1.metric("매력도 점수", f"{d['attractiveness_score']:.1f}" if pd.notna(d.get('attractiveness_score')) else "-")
-        m2.metric("수요 점수",   f"{d['demand_score']:.1f}"        if pd.notna(d.get('demand_score'))        else "-")
-        m3, m4 = st.columns(2)
-        m3.metric("경쟁 점수",   f"{d['competition_score']:.1f}"   if pd.notna(d.get('competition_score'))   else "-")
-        m4.metric("비용 점수",   f"{d['cost_score']:.1f}"          if pd.notna(d.get('cost_score'))          else "-")
+        sel_idx = sel_idx[:4]  # 최대 4개까지 비교
+        selected_dongs = [df_dong.loc[df_view.index[i]] for i in sel_idx]
 
         st.markdown("---")
-        st.markdown(f"**근로자** {int(d.get('total_workers',0)):,}명 (여성 {int(d.get('female_workers',0)):,}명)")
-        st.markdown(f"**카페 수** {int(d.get('cafe_count',0))}개")
-        st.markdown(f"**지역 평균 매출** {d.get('monthly_sales',0)/1e8:.2f}억원", help="해당 행정동 내 모든 카페 매장의 평균 월 매출액입니다.")
+        st.subheader(f"🏙️ 행정동 비교 분석 ({len(selected_dongs)}개 선택)", help="선택한 행정동들의 핵심 지표를 나란히 비교합니다. 최대 4개까지 비교 가능합니다.")
 
-        # 브랜드 현황
-        st.markdown("**브랜드별 매장 분포**")
-        brand_counts_dong = []
-        for brand in ACTIVE_BRANDS:
-            cnt = int(d.get(f"cnt_{brand}", 0))
-            if cnt > 0:
-                brand_counts_dong.append({"브랜드": brand, "매장수": cnt})
-        
-        if brand_counts_dong:
-            df_brand_dong = pd.DataFrame(brand_counts_dong).sort_values("매장수", ascending=True)
-            fig = px.bar(df_brand_dong, x="매장수", y="브랜드", orientation='h',
-                         color="브랜드", color_discrete_map=ADJUSTED_BRAND_COLORS,
-                         text_auto=True)
-            # 매장 수에 따라 높이 유동적 조절
-            chart_height = max(150, len(df_brand_dong) * 30)
-            fig.update_layout(**PLOT_LAYOUT)
-            fig.update_layout(height=chart_height, showlegend=False, 
-                              margin=dict(l=0, r=20, t=10, b=10))
-            fig.update_xaxes(title=None, **GRID_STYLE)
-            fig.update_yaxes(title=None, **GRID_STYLE)
-            st.plotly_chart(fig, use_container_width=True)
-        else:
-            st.caption("해당 지역에 진출한 브랜드가 없습니다.")
+        # 가로 컬럼 생성
+        compare_cols = st.columns(len(selected_dongs))
+        for col, d in zip(compare_cols, selected_dongs):
+            with col:
+                st.markdown(f"### 📍 {d['dong_name']}")
+                st.metric("매력도", f"{d['attractiveness_score']:.1f}" if pd.notna(d.get('attractiveness_score')) else "-")
+                mc1, mc2 = st.columns(2)
+                mc1.metric("수요", f"{d['demand_score']:.1f}" if pd.notna(d.get('demand_score')) else "-")
+                mc2.metric("경쟁", f"{d['competition_score']:.1f}" if pd.notna(d.get('competition_score')) else "-")
+                mc3, mc4 = st.columns(2)
+                mc3.metric("비용", f"{d['cost_score']:.1f}" if pd.notna(d.get('cost_score')) else "-")
+                mc4.metric("기회지수", f"{d.get('opportunity_score', 0):,.1f}")
 
-        # 연령대 차트
-        st.markdown("**연령대별 매출**")
-        age_vals = [d.get(c, 0) / 1e6 for c in ["age_10","age_20","age_30","age_40","age_50","age_60"]]
-        fig = go.Figure(go.Bar(
-            x=["10대","20대","30대","40대","50대","60대+"],
-            y=age_vals,
-            marker_color=["#FF6B6B","#FFE66D","#4ECDC4","#58a6ff","#bc8cff","#A8E6CF"],
-        ))
-        fig.update_layout(**PLOT_LAYOUT, height=220)
-        fig.update_xaxes(**GRID_STYLE)
-        fig.update_yaxes(title="백만원", **GRID_STYLE)
-        st.plotly_chart(fig, use_container_width=True)
+                st.markdown("---")
+                st.markdown(f"**근로자** {int(d.get('total_workers',0)):,}명")
+                st.markdown(f"**카페 수** {int(d.get('cafe_count',0))}개")
+                st.markdown(f"**평균매출** {d.get('monthly_sales',0)/1e8:.2f}억")
+                st.markdown(f"**침투율** {d.get('penetration_rate',0):.1f}%")
+                st.markdown(f"**폐업률** {d.get('closure_rate',0):.1f}%")
 
-        # ── 상세 분석 지표 (Advanced Metrics) ──
-        st.markdown("---")
-        st.subheader("📊 상세 분석 지표", help="기회 지수(종사자/매장), 침투율(저가비중), 피크 집중도 등을 종합하여 상권의 세부 특성을 정량화한 지표입니다.")
-        
-        m1, m2, m3, m4 = st.columns(4)
-        with m1:
-            opp_score = d.get('opportunity_score', 0)
-            st.metric("기회 지수", f"{opp_score:,.1f}", help="매장당 종사자 수. 높을수록 잠재 수요 대비 경쟁이 적음을 의미")
-        with m2:
-            pen_rate = d.get('penetration_rate', 0)
-            st.metric("저가 브랜드 침투율", f"{pen_rate:.1f}%", help="전체 카페 수 대비 저가 브랜드 비중")
-        with m3:
-            peak_ratio = d.get('peak_sales_ratio', 0)
-            st.metric("피크 시간 매출 비중", f"{peak_ratio:.1f}%", help="06~14시 매출이 전체에서 차지하는 비중")
-        with m4:
-            closure_rate = d.get('closure_rate', 0)
-            st.metric("폐업률", f"{closure_rate:.1f}%", help="해당 지역 카페들의 전체 대비 폐업 매장 비율")
-        
-        m5, m6, m7, m8 = st.columns(4)
-        with m5:
-            weekday_ratio = d.get('weekday_sales_ratio', 0)
-            st.metric("주중 매출 비중", f"{weekday_ratio:.1f}%")
-        with m6:
-            avg_op = d.get('avg_op_days', 0) / 365
-            st.metric("평균 영업 기간", f"{avg_op:.1f}년")
-        with m7:
-            comp_intensity = d.get('competition_intensity', 0)
-            st.metric("경쟁 강도", f"{comp_intensity:.1f}", help="종사자 100명당 카페 수")
-        with m8:
-            total_workers_val = d.get('total_workers', 0)
-            st.metric("총 종사자 수", f"{total_workers_val:,.0f}명")
+                st.markdown("---")
 
-        # ── 점수 계산 방법 설명 ──
-        st.markdown("---")
-        st.subheader("📐 가중치 및 평가 지수", help="서울시 전체 데이터를 0~1로 정규화한 후, 각 항목별 가중치(수요 0.4, 경쟁 0.3, 비용 0.3)를 적용하여 산출된 결과입니다.")
-        st.caption("서울 행정동별 데이터를 **Min-Max 정규화(0~1)** 한 후 가중 합산한 결과입니다.")
-        
-        sc1, sc2, sc3, sc4 = st.columns(4)
-        with sc1:
-            st.markdown(f"""
-            <div class="stp-card" style="--stp-color:#4ECDC4">
-              <div class="stp-name" style="color:#4ECDC4">📈 수요 점수</div>
-              <div class="stp-formula">(정규화_매출 × 0.5\\n+ 정규화_종사자 × 0.5)\\n× 100</div>
-              <div class="stp-note">월매출 + 종사자수를 동등 반영. 높을수록 ↑</div>
-            </div>
-            """, unsafe_allow_html=True)
-        with sc2:
-            st.markdown(f"""
-            <div class="stp-card" style="--stp-color:#FFE66D">
-              <div class="stp-name" style="color:#FFE66D">⚔️ 경쟁 점수</div>
-              <div class="stp-formula">(1 − 정규화_카페수)\\n× 100</div>
-              <div class="stp-note">카페 수 적을수록 ↑ (반비례)</div>
-            </div>
-            """, unsafe_allow_html=True)
-        with sc3:
-            st.markdown(f"""
-            <div class="stp-card" style="--stp-color:#A8E6CF">
-              <div class="stp-name" style="color:#A8E6CF">💰 비용 점수</div>
-              <div class="stp-formula">(1 − 정규화_부동산가)\\n× 100</div>
-              <div class="stp-note">m² 당 부동산가 낮을수록 ↑ (반비례)</div>
-            </div>
-            """, unsafe_allow_html=True)
-        with sc4:
-            st.markdown(f"""
-            <div class="stp-card" style="--stp-color:{THEME['accent']}">
-              <div class="stp-name" style="color:{THEME['accent']}">⭐ 종합 매력도</div>
-              <div class="stp-formula">수요 × 0.4\\n+ 경쟁 × 0.3\\n+ 비용 × 0.3</div>
-              <div class="stp-note">유동인구 많고 · 경쟁 적고 · 임대료 저렴할수록 ↑</div>
-            </div>
-            """, unsafe_allow_html=True)
+                # 브랜드 분포
+                st.markdown("**브랜드 분포**")
+                brand_counts_dong = []
+                for brand in ACTIVE_BRANDS:
+                    cnt = int(d.get(f"cnt_{brand}", 0))
+                    if cnt > 0:
+                        brand_counts_dong.append({"브랜드": brand, "매장수": cnt})
+                if brand_counts_dong:
+                    df_bd = pd.DataFrame(brand_counts_dong).sort_values("매장수", ascending=True)
+                    fig = px.bar(df_bd, x="매장수", y="브랜드", orientation='h',
+                                 color="브랜드", color_discrete_map=ADJUSTED_BRAND_COLORS, text_auto=True)
+                    fig.update_layout(**{**PLOT_LAYOUT, 'margin': dict(l=0, r=10, t=5, b=5)},
+                                      height=max(120, len(df_bd)*28), showlegend=False)
+                    fig.update_xaxes(title=None, **GRID_STYLE)
+                    fig.update_yaxes(title=None, **GRID_STYLE)
+                    st.plotly_chart(fig, use_container_width=True)
+                else:
+                    st.caption("진출 브랜드 없음")
 
-        sc5, sc6, sc7, sc8 = st.columns(4)
-        with sc5:
-            st.markdown(f"""
-            <div class="stp-card" style="--stp-color:#FF6B6B">
-              <div class="stp-name" style="color:#FF6B6B">🎯 기회 지수</div>
-              <div class="stp-formula">총 종사자 수\\n÷ 저가 커피 매장 수</div>
-              <div class="stp-note">잠재 고객 대비 경쟁 정도. 높을수록 유리</div>
-            </div>
-            """, unsafe_allow_html=True)
-        with sc6:
-            st.markdown(f"""
-            <div class="stp-card" style="--stp-color:#bc8cff">
-              <div class="stp-name" style="color:#bc8cff">📉 브랜드 침투율</div>
-              <div class="stp-formula">(저가 브랜드 수\\n÷ 전체 카페 수) × 100</div>
-              <div class="stp-note">저가 브랜드의 시장 점유율 (%)</div>
-            </div>
-            """, unsafe_allow_html=True)
-        with sc7:
-            st.markdown(f"""
-            <div class="stp-card" style="--stp-color:#FF9F43">
-              <div class="stp-name" style="color:#FF9F43">⏰ 피크 매출 비중</div>
-              <div class="stp-formula">(06~14시 매출\\n÷ 총 매출) × 100</div>
-              <div class="stp-note">출근/점심 시간대 수요 집중도 (%)</div>
-            </div>
-            """, unsafe_allow_html=True)
-        with sc8:
-            st.markdown(f"""
-            <div class="stp-card" style="--stp-color:#10AC84">
-              <div class="stp-name" style="color:#10AC84">⚠️ 폐업률</div>
-              <div class="stp-formula">(폐업 매장 수\\n÷ 전체 매장 수) × 100</div>
-              <div class="stp-note">지역 내 카페의 생존 안정성 (%)</div>
-            </div>
-            """, unsafe_allow_html=True)
+                # 연령대별 매출
+                st.markdown("**연령대별 매출**")
+                age_vals = [d.get(c, 0) / 1e6 for c in ["age_10","age_20","age_30","age_40","age_50","age_60"]]
+                fig = go.Figure(go.Bar(
+                    x=["10대","20대","30대","40대","50대","60+"],
+                    y=age_vals,
+                    marker_color=["#FF6B6B","#FFE66D","#4ECDC4","#58a6ff","#bc8cff","#A8E6CF"],
+                ))
+                fig.update_layout(**{**PLOT_LAYOUT, 'margin': dict(l=0, r=0, t=5, b=5)}, height=180)
+                fig.update_xaxes(**GRID_STYLE)
+                fig.update_yaxes(title="백만원", **GRID_STYLE)
+                st.plotly_chart(fig, use_container_width=True)
     else:
-        st.info("👆 테이블에서 행을 클릭하면 상세 정보가 표시됩니다.")
+        st.info("👆 테이블에서 행을 클릭하면 상세 정보가 표시됩니다. (여러 행 선택 가능, 최대 4개)")
 
 
 # ══════════════════════════════════════════════
