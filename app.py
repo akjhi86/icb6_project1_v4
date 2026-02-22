@@ -1255,7 +1255,7 @@ elif selected_tab == "⭐ 입지 추천":
     # 행정동 그룹화를 위해 충분한 데이터 확보 (동별 중복 브랜드 고려)
     df_r = df_r.sort_values(rec_sort, ascending=False).head(1000)
 
-    st.subheader(f"##### ⭐ 입지 추천 — {df_r['dong_name'].nunique()}개 행정동", help="매력도 점수(수요, 경쟁, 비용)를 기준으로 브랜드가 진출하기에 가장 적합한 미진출 행정동을 추천합니다.")
+    st.subheader(f"⭐ 입지 추천 — {df_r['dong_name'].nunique()}개 행정동", help="매력도 점수(수요, 경쟁, 비용)를 기준으로 브랜드가 진출하기에 가장 적합한 미진출 행정동을 추천합니다.")
 
     if df_r.empty:
         st.warning("조건에 맞는 추천 결과가 없습니다.")
